@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Root">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;adnansalem1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/adnansalem1/BikeShopFrontEnd.git&quot;,
+    &quot;accountId&quot;: &quot;a3aab4db-f110-4559-99ad-d7180bd498dc&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2g8cGT5hdGJkvdQ7fuGOj2ySSPQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Jest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.renders properly.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.spec.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.example.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/adnansalem/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/vue-project/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/vue-project/src/components/home" />
+      <recent name="$PROJECT_DIR$/vue-project/src/components" />
+      <recent name="$PROJECT_DIR$/vue-project/src/views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/vue-project/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="" />
+      <created>1715082550579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715082550579</updated>
+      <workItem from="1715082552068" duration="227000" />
+      <workItem from="1715082789711" duration="1781000" />
+      <workItem from="1715085177449" duration="1591000" />
+      <workItem from="1715086843489" duration="23684000" />
+      <workItem from="1715364343032" duration="12000000" />
+      <workItem from="1716299034251" duration="17000" />
+      <workItem from="1716315676192" duration="127000" />
+      <workItem from="1716315982589" duration="392000" />
+      <workItem from="1716553399621" duration="79000" />
+      <workItem from="1716553484303" duration="12902000" />
+      <workItem from="1716806954348" duration="20000" />
+    </task>
+    <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
+      <option name="closed" value="true" />
+      <created>1715083174077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715083174077</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Components">
+      <option name="closed" value="true" />
+      <created>1715204696776</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715204696776</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First Components v.1">
+      <option name="closed" value="true" />
+      <created>1716554497930</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554497930</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dependencies">
+      <option name="closed" value="true" />
+      <created>1716554771153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554771153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dependencies 2">
+      <option name="closed" value="true" />
+      <created>1716554883280</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554883280</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dependencies 3">
+      <option name="closed" value="true" />
+      <created>1716555340789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555340789</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dependencies 4">
+      <option name="closed" value="true" />
+      <created>1716555817935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555817935</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dependencies 5">
+      <option name="closed" value="true" />
+      <created>1716556590770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556590770</updated>
+    </task>
+    <task id="LOCAL-00009" summary="OS auf Linux">
+      <option name="closed" value="true" />
+      <created>1716558429963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716558429963</updated>
+    </task>
+    <task id="LOCAL-00010" summary="OS auf Darwin">
+      <option name="closed" value="true" />
+      <created>1716742501363</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716742501363</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3">
+      <option name="closed" value="true" />
+      <created>1716743575864</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716743575864</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Deleted optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3">
+      <option name="closed" value="true" />
+      <created>1716743776104</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716743776104</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Root">
+      <option name="closed" value="true" />
+      <created>1716806121076</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716806121077</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="NPM &#10;Vue.js&#10;Node&#10;installiert" />
+    <MESSAGE value="First Components" />
+    <MESSAGE value="First Components v.1" />
+    <MESSAGE value="dependencies" />
+    <MESSAGE value="dependencies 2" />
+    <MESSAGE value="dependencies 3" />
+    <MESSAGE value="dependencies 4" />
+    <MESSAGE value="dependencies 5" />
+    <MESSAGE value="OS auf Linux" />
+    <MESSAGE value="OS auf Darwin" />
+    <MESSAGE value="Added optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3" />
+    <MESSAGE value="Deleted optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3" />
+    <MESSAGE value="Root" />
+    <option name="LAST_COMMIT_MESSAGE" value="Root" />
+  </component>
+</project>
