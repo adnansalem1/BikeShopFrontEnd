@@ -1,3 +1,36 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+
+interface Anzeige {
+  name: string;
+  beschreibung: string;
+  preis: number;
+}
+
+const items = ref<Anzeige[]>([]);
+
+const loadThings = () => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  const endpoint = `${baseURL}/anzeigen`;
+  const requestOptions: RequestInit = {
+    method: 'GET',
+    redirect: 'follow' as RequestRedirect // Korrektur hier
+  };
+
+  fetch(endpoint, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        items.value = result;
+      })
+      .catch(error => console.log('error', error));
+};
+
+onMounted(() => {
+  loadThings();
+});
+</script>
+
 <template>
   <header class="header">
     <div class="wrapper">
@@ -17,39 +50,6 @@
 
   <RouterView />
 </template>
-
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { RouterLink, RouterView } from 'vue-router';
-
-interface Anzeige {
-  name: string;
-  beschreibung: string;
-  preis: number;
-}
-
-const items = ref<Anzeige[]>([]);
-
-const loadThings = () => {
-  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
-  const endpoint = `${baseURL}/anzeigen`;
-  const requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-
-  fetch(endpoint, requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        items.value = result;
-      })
-      .catch(error => console.log('error', error));
-};
-
-onMounted(() => {
-  loadThings();
-});
-</script>
 
 <style scoped>
 .header {
