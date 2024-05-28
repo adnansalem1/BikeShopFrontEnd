@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header class="header">
     <div class="wrapper">
@@ -11,8 +7,49 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
 
+  <div id="app">
+    <ul>
+      <li v-for="item in items" :key="item.name">
+        {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
+      </li>
+    </ul>
+  </div>
+
   <RouterView />
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+
+interface Anzeige {
+  name: string;
+  beschreibung: string;
+  preis: number;
+}
+
+const items = ref<Anzeige[]>([]);
+
+const loadThings = () => {
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  const endpoint = `${baseURL}/anzeigen`;
+  const requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+
+  fetch(endpoint, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        items.value = result;
+      })
+      .catch(error => console.log('error', error));
+};
+
+onMounted(() => {
+  loadThings();
+});
+</script>
 
 <style scoped>
 .header {
@@ -20,59 +57,19 @@ import { RouterLink, RouterView } from 'vue-router'
   max-height: 100vh;
 }
 
-.wrapper {
-  margin: 0 auto;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 2rem;
+  color: #2c3e50;
+  margin-top: 100px;
 }
 
-.nav-link {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-.nav-link:first-of-type {
-  border: none;
-}
-
-.nav-link.router-link-exact-active {
-  color: var(--color-text);
-}
-
-.nav-link.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-@media (min-width: 1024px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 calc(var(--section-gap) / 2);
-  }
-
-  .wrapper {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    padding: 1rem 1.5rem;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+html, body {
+  background-color: #dcdcdc;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 </style>
