@@ -29,8 +29,8 @@ interface Anzeige {
 const items = ref<Anzeige[]>([]);
 
 const loadThings = () => {
-  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
-  const endpoint = `${baseURL}/anzeigen`;
+  //const baseURL = import.meta.env.VITE_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
+  const endpoint = `https://bikeshop-aluz.onrender.com/anzeigen`;
   const requestOptions: RequestInit = {
     method: 'GET',
     redirect: 'follow' as RequestRedirect
