@@ -29,14 +29,14 @@ interface Anzeige {
 const items = ref<Anzeige[]>([]);
 
 const loadThings = () => {
-  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL;
+  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
   const endpoint = `${baseURL}/anzeigen`;
   const requestOptions: RequestInit = {
     method: 'GET',
     redirect: 'follow' as RequestRedirect
   };
 
-  console.log('Fetching data from:', endpoint); // Debugging Zeile
+  console.log('Fetching data from:', endpoint); // Debugging-Zeile
 
   fetch(endpoint, requestOptions)
       .then(response => {
@@ -46,7 +46,7 @@ const loadThings = () => {
         return response.json();
       })
       .then(result => {
-        console.log('Received data:', result); // Debugging Zeile
+        console.log('Received data:', result); // Debugging-Zeile
         items.value = result;
       })
       .catch(error => console.error('Fetch error:', error));
