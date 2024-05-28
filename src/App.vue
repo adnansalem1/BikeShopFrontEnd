@@ -29,7 +29,7 @@ interface Anzeige {
 const items = ref<Anzeige[]>([]);
 
 const loadThings = () => {
-  const baseURL = import.meta.env.VITE_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
+  const baseURL = import.meta.env.VITE_APP_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
   const endpoint = baseURL + `/anzeigen`;
   const requestOptions: RequestInit = {
     method: 'GET',
