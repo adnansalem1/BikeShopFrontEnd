@@ -1,3 +1,21 @@
+<template>
+    <header class="header">
+<div class="wrapper">
+<nav>
+    <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
+    </nav>
+    </div>
+    </header>
+    <div id="app">
+    <ul>
+        <li v-for="item in items" :key="item.name">
+    {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
+</li>
+</ul>
+<RouterView />
+</div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
@@ -15,41 +33,29 @@ const loadThings = () => {
   const endpoint = `${baseURL}/anzeigen`;
   const requestOptions: RequestInit = {
     method: 'GET',
-    redirect: 'follow' as RequestRedirect // Korrektur hier
+    redirect: 'follow' as RequestRedirect
   };
 
+  console.log('Fetching data from:', endpoint); // Debugging Zeile
+
   fetch(endpoint, requestOptions)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(result => {
+        console.log('Received data:', result); // Debugging Zeile
         items.value = result;
       })
-      .catch(error => console.log('error', error));
+      .catch(error => console.error('Fetch error:', error));
 };
 
 onMounted(() => {
   loadThings();
 });
 </script>
-
-<template>
-  <header class="header">
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <div id="app">
-    <ul>
-      <li v-for="item in items" :key="item.name">
-        {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
-      </li>
-    </ul>
-  </div>
-
-  <RouterView />
-</template>
 
 <style scoped>
 .header {

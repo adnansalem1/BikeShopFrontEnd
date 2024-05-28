@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Added Env" />
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Added Env">
+      <change afterPath="$PROJECT_DIR$/public/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProductListView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductListView.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,38 +55,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Jest.HelloWorld.executor": "Run",
-    "Jest.HelloWorld.renders properly.executor": "Run",
-    "Jest.HelloWorld.spec.ts.executor": "Run",
-    "Jest.example.test.js.executor": "Run",
-    "Node.js.Unnamed.executor": "Run",
-    "Node.js.example.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Vitest.HelloWorld.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/adnansalem/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.test.executor": "Run",
-    "prettier.import.notification.dismissed": "true",
-    "settings.editor.selected.configurable": "swagger",
-    "ts.external.directory.path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Jest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.renders properly.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.spec.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.example.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/adnansalem/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;swagger&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
