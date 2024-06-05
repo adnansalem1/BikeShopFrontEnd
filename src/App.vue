@@ -1,19 +1,19 @@
 <template>
-    <header class="header">
-<div class="wrapper">
-<nav>
-    <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
-    </nav>
+  <header class="header">
+    <div class="wrapper">
+      <nav>
+        <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
+      </nav>
     </div>
-    </header>
-    <div id="app">
+  </header>
+  <div id="app">
     <ul>
-        <li v-for="item in items" :key="item.name">
-    {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
-</li>
-</ul>
-<RouterView />
-</div>
+      <li v-for="item in items" :key="item.name">
+        {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
+      </li>
+    </ul>
+    <RouterView />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -29,14 +29,14 @@ interface Anzeige {
 const items = ref<Anzeige[]>([]);
 
 const loadThings = () => {
-  const baseURL = import.meta.env.VITE_APP_BACKEND_BASE_URL; // Verwende die Umgebungsvariable
-  const endpoint = baseURL + `/anzeigen`;
+  const baseURL = import.meta.env.VITE_APP_BACKEND_BASE_URL;
+  const endpoint = `${baseURL}/anzeigen`;
   const requestOptions: RequestInit = {
     method: 'GET',
-    redirect: 'follow' as RequestRedirect
+    redirect: 'follow' as RequestRedirect,
   };
 
-  console.log('Fetching data from:', endpoint); // Debugging-Zeile
+  console.log('Fetching data from:', endpoint);
 
   fetch(endpoint, requestOptions)
       .then(response => {
@@ -46,7 +46,7 @@ const loadThings = () => {
         return response.json();
       })
       .then(result => {
-        console.log('Received data:', result); // Debugging-Zeile
+        console.log('Received data:', result);
         items.value = result;
       })
       .catch(error => console.error('Fetch error:', error));
@@ -73,7 +73,7 @@ onMounted(() => {
 }
 
 html, body {
-  background-color: #dcdcdc;
+    background-color: #90ee90; /* Light green */
   margin: 0;
   padding: 0;
   height: 100%;
