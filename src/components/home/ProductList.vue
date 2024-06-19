@@ -3,7 +3,7 @@
     <h1>Product List</h1>
     <div>
       <label for="search">Search:</label>
-      <input type="text" id="search" v-model="searchTerm" @input="filterProducts" />
+      <input type="text" id="search" v-model="searchTerm" />
     </div>
     <ul v-if="filteredProducts.length > 0">
       <li v-for="product in filteredProducts" :key="product.id">
@@ -43,39 +43,19 @@ export default {
   },
   computed: {
     filteredProducts() {
-      if (this.searchTerm === "") {
-        return this.products;
-      } else {
-        return this.products.filter(product =>
-            product.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-        );
-      }
+      return this.searchTerm ?
+          this.products.filter(product => product.name.toLowerCase().includes(this.searchTerm.toLowerCase())) :
+          this.products;
     }
   },
   methods: {
-    filterProducts() {
-      // Trigger the computed property to recompute the filtered products
-      this.filteredProducts;
-    },
-    someMethod() {
-      // Methodenlogik
-    },
-    submitForm() {
-      axios.post('http://localhost:8080/anzeigen', this.product)
-          .then(response => {
-            console.log(response);
-          })
-          .catch(error => {
-            console.error(error);
-          });
-    },
     addProduct() {
       const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
       axios.post(endpoint, this.newProduct)
           .then(response => {
             console.log('Product added successfully:', response.data);
             this.products.push(response.data);
-            this.newProduct = { name: "", beschreibung: "", preis: 0 };
+            this.newProduct = { name: "", beschreibung: "", preis: 0 }; // Reset form
           })
           .catch(error => {
             console.error('Error adding product:', error);
