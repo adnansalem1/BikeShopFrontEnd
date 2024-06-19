@@ -79,6 +79,15 @@ export default {
             console.error('Error loading products:', error);
           });
     }
+    submitForm() {
+      axios.post('http://localhost:8080/anzeigen', this.product)
+          .then(response => {
+            alert('Produkt hinzugefügt!');
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.error('Es gab einen Fehler beim Senden der Daten:', error);
+          });
   },
   mounted() {
     this.loadProducts();
