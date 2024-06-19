@@ -57,6 +57,18 @@ export default {
       // Trigger the computed property to recompute the filtered products
       this.filteredProducts;
     },
+    someMethod() {
+      // Methodenlogik
+    },
+    submitForm() {
+      axios.post('http://localhost:8080/anzeigen', this.product)
+          .then(response => {
+            console.log(response);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+    },
     addProduct() {
       const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
       axios.post(endpoint, this.newProduct)
@@ -79,15 +91,6 @@ export default {
             console.error('Error loading products:', error);
           });
     }
-    submitForm() {
-      axios.post('http://localhost:8080/anzeigen', this.product)
-          .then(response => {
-            alert('Produkt hinzugefügt!');
-            console.log(response.data);
-          })
-          .catch(error => {
-            console.error('Es gab einen Fehler beim Senden der Daten:', error);
-          });
   },
   mounted() {
     this.loadProducts();
