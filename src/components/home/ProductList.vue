@@ -7,29 +7,44 @@
     </div>
     <ul v-if="filteredProducts.length > 0">
       <li v-for="product in filteredProducts" :key="product.id">
-        {{ product.name }} - {{ product.price }}€
+        {{ product.name }} - {{ product.preis }}€
       </li>
     </ul>
     <p v-else>No products found.</p>
+    <div>
+      <h2>Add Product</h2>
+      <form @submit.prevent="addProduct">
+        <label for="name">Name:</label>
+        <input type="text" id="name" v-model="newProduct.name" required />
+        <label for="beschreibung">Description:</label>
+        <input type="text" id="beschreibung" v-model="newProduct.beschreibung" required />
+        <label for="preis">Price:</label>
+        <input type="number" id="preis" v-model="newProduct.preis" required />
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      products: [
-        { id: 1, name: "Bike 1", price: 500 },
-        { id: 2, name: "Bike 2", price: 700 },
-        { id: 3, name: "Bike 3", price: 900 }
-      ],
-      searchTerm: ""
+      products: [],
+      searchTerm: "",
+      newProduct: {
+        name: "",
+        beschreibung: "",
+        preis: 0
+      }
     };
   },
   computed: {
     filteredProducts() {
       if (this.searchTerm === "") {
-        return [];
+        return this.products;
       } else {
         return this.products.filter(product =>
             product.name.toLowerCase().includes(this.searchTerm.toLowerCase())
@@ -41,7 +56,55 @@ export default {
     filterProducts() {
       // Trigger the computed property to recompute the filtered products
       this.filteredProducts;
+    },
+    addProduct() {
+      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
+      axios.post(endpoint, this.newProduct)
+          .then(response => {
+            console.log('Product added successfully:', response.data);
+            this.products.push(response.data);
+            this.newProduct = { name: "", beschreibung: "", preis: 0 };
+          })
+          .catch(error => {
+            console.error('Error adding product:', error);
+          });
+    },
+    loadProducts() {
+      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
+      axios.get(endpoint)
+          .then(response => {
+            this.products = response.data;
+          })
+          .catch(error => {
+            console.error('Error loading products:', error);
+          });
     }
+  },
+  mounted() {
+    this.loadProducts();
   }
 };
 </script>
+
+<style scoped>
+.header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 100px;
+}
+
+html, body {
+  background-color: #90ee90; /* Light green */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+</style>
