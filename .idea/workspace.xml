@@ -145,7 +145,7 @@
       <workItem from="1716815778299" duration="5050000" />
       <workItem from="1717575634734" duration="190000" />
       <workItem from="1717575845537" duration="2579000" />
-      <workItem from="1718783077645" duration="15889000" />
+      <workItem from="1718783077645" duration="16561000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -411,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718886920140</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Methoden Update, Search">
+      <option name="closed" value="true" />
+      <created>1718890561077</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1718890561077</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
