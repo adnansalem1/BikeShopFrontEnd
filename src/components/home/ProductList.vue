@@ -8,6 +8,7 @@
     <ul v-if="filteredProducts.length > 0">
       <li v-for="product in filteredProducts" :key="product.id">
         {{ product.name }} - {{ product.preis }}€
+        <button @click="deleteProduct(product.id)">Delete</button>
       </li>
     </ul>
     <p v-else>No products found.</p>
@@ -59,6 +60,17 @@ export default {
           })
           .catch(error => {
             console.error('Error adding product:', error);
+          });
+    },
+    deleteProduct(id) {
+      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${id}`;
+      axios.delete(endpoint)
+          .then(() => {
+            console.log('Product deleted successfully:', id);
+            this.products = this.products.filter(product => product.id !== id);
+          })
+          .catch(error => {
+            console.error('Error deleting product:', error);
           });
     },
     loadProducts() {

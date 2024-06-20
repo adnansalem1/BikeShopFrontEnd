@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="POST-Anfragen 2">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Auto Load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
     </list>
@@ -145,7 +145,7 @@
       <workItem from="1716815778299" duration="5050000" />
       <workItem from="1717575634734" duration="190000" />
       <workItem from="1717575845537" duration="2579000" />
-      <workItem from="1718783077645" duration="4940000" />
+      <workItem from="1718783077645" duration="9137000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -371,14 +371,21 @@
       <option name="project" value="LOCAL" />
       <updated>1718787430925</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Auto Load">
+      <option name="closed" value="true" />
+      <created>1718788048998</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1718788048998</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dependencies 2" />
     <MESSAGE value="dependencies 3" />
     <MESSAGE value="dependencies 4" />
     <MESSAGE value="dependencies 5" />
@@ -403,7 +410,8 @@
     <MESSAGE value="Delete Navbar.vue und V.heading.vue" />
     <MESSAGE value="POST-Anfragen" />
     <MESSAGE value="POST-Anfragen 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="POST-Anfragen 2" />
+    <MESSAGE value="Auto Load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto Load" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
