@@ -4,7 +4,6 @@
     <div class="search-container">
       <input
           v-model="searchQuery"
-          @input="filterProducts"
           placeholder="Search for a product..."
           class="input-field"
       />
@@ -53,15 +52,12 @@ export default {
         beschreibung: "",
         preis: null,
       },
-      products: [
-        { id: 1, name: "Product 1", beschreibung: "Description 1", preis: 100 },
-        { id: 2, name: "Product 2", beschreibung: "Description 2", preis: 200 },
-      ],
+      products: [],
       filteredProducts: [],
     };
   },
   methods: {
-    async filterProducts() {
+    filterProducts() {
       this.filteredProducts = this.products.filter((product) =>
           product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
@@ -74,32 +70,32 @@ export default {
       ) {
         try {
           const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`, {
-            method: 'POST',
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json'
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(this.newProduct)
+            body: JSON.stringify(this.newProduct),
           });
-          const newProduct = await response.json();
-          this.products.push({ ...newProduct, id: newProduct.id });
+          const addedProduct = await response.json();
+          this.products.push(addedProduct);
           this.newProduct.name = "";
           this.newProduct.beschreibung = "";
           this.newProduct.preis = null;
           this.filterProducts();
         } catch (error) {
-          console.error('Error adding product:', error);
+          console.error("Error adding product:", error);
         }
       }
     },
     async deleteProduct(id) {
       try {
         await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${id}`, {
-          method: 'DELETE'
+          method: "DELETE",
         });
         this.products = this.products.filter((product) => product.id !== id);
         this.filterProducts();
       } catch (error) {
-        console.error('Error deleting product:', error);
+        console.error("Error deleting product:", error);
       }
     },
     async loadProducts() {
@@ -109,13 +105,18 @@ export default {
         this.products = products;
         this.filterProducts();
       } catch (error) {
-        console.error('Error loading products:', error);
+        console.error("Error loading products:", error);
       }
-    }
+    },
   },
-  mounted() {
-    this.loadProducts();
-  }
+  watch: {
+    searchQuery() {
+      this.filterProducts();
+    },
+  },
+  async mounted() {
+    await this.loadProducts();
+  },
 };
 </script>
 
