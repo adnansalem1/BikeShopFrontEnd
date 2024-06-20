@@ -14,6 +14,7 @@
         <button @click="deleteProduct(product.id)" class="delete-button">Delete</button>
       </li>
     </ul>
+    <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
     <div class="form-container">
       <h2>Add New Product</h2>
       <form @submit.prevent="addProduct">
@@ -58,9 +59,17 @@ export default {
   },
   methods: {
     filterProducts() {
-      this.filteredProducts = this.products.filter((product) =>
-          product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-      );
+      console.log("Filtering products based on query:", this.searchQuery);
+      const lowerCaseQuery = this.searchQuery.toLowerCase();
+      this.filteredProducts = this.products.map(p => ({ ...p })).filter(product => {
+        console.log("Checking product:", product);
+        return (
+            product.name.toLowerCase().includes(lowerCaseQuery) ||
+            product.beschreibung.toLowerCase().includes(lowerCaseQuery) ||
+            product.preis.toString().includes(lowerCaseQuery)
+        );
+      });
+      console.log("Filtered products:", this.filteredProducts);
     },
     async addProduct() {
       if (
@@ -102,7 +111,9 @@ export default {
       try {
         const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
         const products = await response.json();
+        console.log("Received data:", products);
         this.products = products;
+        console.log("Loaded products:", this.products);
         this.filterProducts();
       } catch (error) {
         console.error("Error loading products:", error);

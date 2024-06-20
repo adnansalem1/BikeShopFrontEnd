@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Methoden Update">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Methoden Update, Search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
     </list>
@@ -145,7 +145,7 @@
       <workItem from="1716815778299" duration="5050000" />
       <workItem from="1717575634734" duration="190000" />
       <workItem from="1717575845537" duration="2579000" />
-      <workItem from="1718783077645" duration="12725000" />
+      <workItem from="1718783077645" duration="15889000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -403,14 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1718886136508</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Methoden Update, Search">
+      <option name="closed" value="true" />
+      <created>1718886920140</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718886920140</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OS auf Linux" />
     <MESSAGE value="OS auf Darwin" />
     <MESSAGE value="Added optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3" />
     <MESSAGE value="Deleted optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3" />
@@ -435,7 +442,8 @@
     <MESSAGE value=" Detailed commit message&#10; Add delete product functionality and button&#10;&#10;- Added a delete button to each product in the product list&#10;- Implemented deleteProduct method in ProductList component&#10;- The deleteProduct method sends a DELETE request to the backend&#10;- Products are removed from the local list upon successful deletion" />
     <MESSAGE value="Style" />
     <MESSAGE value="Methoden Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Methoden Update" />
+    <MESSAGE value="Methoden Update, Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Methoden Update, Search" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
