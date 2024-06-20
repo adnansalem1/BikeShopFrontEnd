@@ -61,33 +61,61 @@ export default {
     };
   },
   methods: {
-    filterProducts() {
+    async filterProducts() {
       this.filteredProducts = this.products.filter((product) =>
           product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     },
-    addProduct() {
+    async addProduct() {
       if (
           this.newProduct.name &&
           this.newProduct.beschreibung &&
           this.newProduct.preis !== null
       ) {
-        const newId = this.products.length + 1;
-        this.products.push({ ...this.newProduct, id: newId });
-        this.newProduct.name = "";
-        this.newProduct.beschreibung = "";
-        this.newProduct.preis = null;
-        this.filterProducts();
+        try {
+          const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.newProduct)
+          });
+          const newProduct = await response.json();
+          this.products.push({ ...newProduct, id: newProduct.id });
+          this.newProduct.name = "";
+          this.newProduct.beschreibung = "";
+          this.newProduct.preis = null;
+          this.filterProducts();
+        } catch (error) {
+          console.error('Error adding product:', error);
+        }
       }
     },
-    deleteProduct(id) {
-      this.products = this.products.filter((product) => product.id !== id);
-      this.filterProducts();
+    async deleteProduct(id) {
+      try {
+        await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${id}`, {
+          method: 'DELETE'
+        });
+        this.products = this.products.filter((product) => product.id !== id);
+        this.filterProducts();
+      } catch (error) {
+        console.error('Error deleting product:', error);
+      }
     },
+    async loadProducts() {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
+        const products = await response.json();
+        this.products = products;
+        this.filterProducts();
+      } catch (error) {
+        console.error('Error loading products:', error);
+      }
+    }
   },
   mounted() {
-    this.filteredProducts = this.products;
-  },
+    this.loadProducts();
+  }
 };
 </script>
 
