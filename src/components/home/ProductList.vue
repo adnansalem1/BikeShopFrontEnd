@@ -1,114 +1,96 @@
 <template>
   <div>
-    <h1>Product List</h1>
-    <div>
-      <label for="search">Search:</label>
-      <input type="text" id="search" v-model="searchTerm" />
+    <h1 class="heading">Product List</h1>
+    <div class="search-container">
+      <input
+          v-model="searchQuery"
+          @input="filterProducts"
+          placeholder="Search for a product..."
+          class="input-field"
+      />
     </div>
-    <ul v-if="filteredProducts.length > 0">
-      <li v-for="product in filteredProducts" :key="product.id">
-        {{ product.name }} - {{ product.preis }}€
-        <button @click="deleteProduct(product.id)">Delete</button>
+    <ul>
+      <li v-for="product in filteredProducts" :key="product.id" class="product-item">
+        {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
+        <button @click="deleteProduct(product.id)" class="delete-button">Delete</button>
       </li>
     </ul>
-    <p v-else>No products found.</p>
-    <div>
-      <h2>Add Product</h2>
+    <div class="form-container">
+      <h2>Add New Product</h2>
       <form @submit.prevent="addProduct">
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="newProduct.name" required />
-        <label for="beschreibung">Description:</label>
-        <input type="text" id="beschreibung" v-model="newProduct.beschreibung" required />
-        <label for="preis">Price:</label>
-        <input type="number" id="preis" v-model="newProduct.preis" required />
-        <button type="submit">Add Product</button>
+        <input
+            v-model="newProduct.name"
+            placeholder="Name"
+            class="input-field"
+            required
+        />
+        <input
+            v-model="newProduct.beschreibung"
+            placeholder="Description"
+            class="input-field"
+            required
+        />
+        <input
+            v-model="newProduct.preis"
+            type="number"
+            placeholder="Price"
+            class="input-field"
+            required
+        />
+        <button type="submit" class="add-button">Add Product</button>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   data() {
     return {
-      products: [],
-      searchTerm: "",
+      searchQuery: "",
       newProduct: {
         name: "",
         beschreibung: "",
-        preis: 0
-      }
+        preis: null,
+      },
+      products: [
+        { id: 1, name: "Product 1", beschreibung: "Description 1", preis: 100 },
+        { id: 2, name: "Product 2", beschreibung: "Description 2", preis: 200 },
+      ],
+      filteredProducts: [],
     };
   },
-  computed: {
-    filteredProducts() {
-      return this.searchTerm ?
-          this.products.filter(product => product.name.toLowerCase().includes(this.searchTerm.toLowerCase())) :
-          this.products;
-    }
-  },
   methods: {
+    filterProducts() {
+      this.filteredProducts = this.products.filter((product) =>
+          product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
     addProduct() {
-      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
-      axios.post(endpoint, this.newProduct)
-          .then(response => {
-            console.log('Product added successfully:', response.data);
-            this.products.push(response.data);
-            this.newProduct = { name: "", beschreibung: "", preis: 0 }; // Reset form
-          })
-          .catch(error => {
-            console.error('Error adding product:', error);
-          });
+      if (
+          this.newProduct.name &&
+          this.newProduct.beschreibung &&
+          this.newProduct.preis !== null
+      ) {
+        const newId = this.products.length + 1;
+        this.products.push({ ...this.newProduct, id: newId });
+        this.newProduct.name = "";
+        this.newProduct.beschreibung = "";
+        this.newProduct.preis = null;
+        this.filterProducts();
+      }
     },
     deleteProduct(id) {
-      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${id}`;
-      axios.delete(endpoint)
-          .then(() => {
-            console.log('Product deleted successfully:', id);
-            this.products = this.products.filter(product => product.id !== id);
-          })
-          .catch(error => {
-            console.error('Error deleting product:', error);
-          });
+      this.products = this.products.filter((product) => product.id !== id);
+      this.filterProducts();
     },
-    loadProducts() {
-      const endpoint = `${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`;
-      axios.get(endpoint)
-          .then(response => {
-            this.products = response.data;
-          })
-          .catch(error => {
-            console.error('Error loading products:', error);
-          });
-    }
   },
   mounted() {
-    this.loadProducts();
-  }
+    this.filteredProducts = this.products;
+  },
 };
 </script>
 
 <style scoped>
-.header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 100px;
-}
-
-html, body {
-  background-color: #90ee90; /* Light green */
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+@import './style.css';
 </style>
