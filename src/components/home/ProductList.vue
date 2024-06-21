@@ -1,13 +1,6 @@
 <template>
   <div>
-    <h1 class="heading">Product List</h1>
-    <div class="search-container">
-      <input
-          v-model="searchQuery"
-          placeholder="Search for a product..."
-          class="input-field"
-      />
-    </div>
+    <h1 class="heading">Fahrräder Liste</h1>
     <ul>
       <li v-for="product in filteredProducts" :key="product.id" class="product-item">
         <div v-if="editingProduct && editingProduct.id === product.id">
@@ -37,9 +30,9 @@
         </div>
       </li>
     </ul>
-    <p v-if="filteredProducts.length === 0">No product found</p>
+    <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
     <div class="form-container">
-      <h2>Add New Product</h2>
+      <h2>Neue Fahrräder hinzufügen</h2>
       <form @submit.prevent="addProduct">
         <input
             v-model="newProduct.name"
@@ -60,7 +53,7 @@
             class="input-field"
             required
         />
-        <button type="submit" class="button add-button">Add Product</button>
+        <button type="submit" class="button add-button"> Hinzufügen</button>
       </form>
     </div>
   </div>
