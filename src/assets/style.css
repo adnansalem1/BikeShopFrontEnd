@@ -182,3 +182,39 @@ a,
     border-color: var(--color-border-hover); /* Change border color on focus */
     outline: none; /* Remove default outline */
 }
+
+/* Styles for the submit button */
+.submit-button {
+    background-color: #4CAF50;
+    color: var(--color-text-dark-1);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the error message */
+.error-message {
+    color: #ff0000;
+    font-size: 0.8rem;
+}
+
+/* Styles for the success message */
+.success-message {
+    color: #008000;
+    font-size: 0.8rem;
+}
+
+/* Styles for the loading spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}

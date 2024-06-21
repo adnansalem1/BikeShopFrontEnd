@@ -2,20 +2,16 @@
   <header class="header">
     <div class="wrapper">
       <nav>
+        <router-link to="/products-home">Produkte Home</router-link>
+
         <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
       </nav>
     </div>
   </header>
   <div id="app">
-    <ul>
-      <li v-for="item in items" :key="item.name">
-        {{ item.name }} - {{ item.beschreibung }} - {{ item.preis }} €
-      </li>
-    </ul>
     <RouterView />
   </div>
 </template>
-
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
@@ -26,9 +22,7 @@ interface Anzeige {
   preis: number;
 }
 
-const items = ref<Anzeige[]>([]);
-
-const loadThings = () => {
+const items = ref<Anzeige[]>([]), loadThings = () => {
   const baseURL = import.meta.env.VITE_APP_BACKEND_BASE_URL;
   const endpoint = `${baseURL}/anzeigen`;
   const requestOptions: RequestInit = {
