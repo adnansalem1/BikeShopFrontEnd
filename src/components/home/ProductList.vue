@@ -20,13 +20,13 @@
               placeholder="Preis"
               class="input-field"
           />
-          <button @click="saveProduct" class="shadow-sm btn btn-outline-success">Speichern</button>
+          <button @click="saveProduct" class="shadow-sm btn btn-outline-success me-1">Speichern</button>
           <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">Abbrechen</button>
         </div>
         <div v-else>
           {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
-          <button @click="editProduct(product)" class="shadow-sm btn btn-success me-1">Bearbeiten</button>
-          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-danger">Löschen</button>
+          <button @click="editProduct(product)" class="shadow-sm btn btn-outline-success me-1">Bearbeiten</button>
+          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-outline-danger">Löschen</button>
         </div>
       </li>
     </ul>
@@ -123,7 +123,7 @@ export default {
           this.newProduct.beschreibung = "";
           this.newProduct.preis = null;
           this.filterProducts();
-          this.setMessage('Produkt erfolgreich hinzugefügt!');
+          this.setMessage('Produkt erfolgreich hinzugefügt! ');
         } catch (error) {
           console.error("Error adding product:", error);
         }

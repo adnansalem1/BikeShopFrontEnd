@@ -2,7 +2,6 @@
 import Home from "@/components/home/ProductHome.vue"
 
 </script>
-
 <template>
   <main>
     <Home />

@@ -1,16 +1,21 @@
 <template>
   <header class="header">
     <div class="wrapper">
-      <nav>
-        <router-link to="/products-home"> <button class="shadow-sm btn btn-outline-primary me-2">Home</button></router-link>
-        <router-link to="/ProductList"> <button class="shadow-sm btn btn-outline-primary">Produkte</button></router-link>
-      </nav>
+      <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm">
+        <li class="nav-item">
+          <router-link to="/products-home" class="nav-link" aria-current="page">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/ProductList" class="nav-link">Produkte</router-link>
+        </li>
+      </ul>
     </div>
   </header>
   <div id="app">
     <RouterView />
   </div>
 </template>
+
 
 
 <script setup lang="ts">
@@ -65,7 +70,7 @@ onMounted(() => {
   width: 100%;
   padding: 1rem 0;
   line-height: 3;
-  max-height: 100vh;
+  max-height: 10vh;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -76,7 +81,7 @@ onMounted(() => {
   font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: -moz-center; transform-style: v-bind(1.5);
   color: #2c3e50;
   margin-top: 100px;
 }
@@ -86,5 +91,26 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+.wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.nav-pills .nav-link {
+  color: #fff;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #0056b3;
+}
+
+.nav-pills .nav-link:focus {
+  background-color: #0056b3;
 }
 </style>
