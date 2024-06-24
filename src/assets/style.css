@@ -67,3 +67,8 @@ body {
     border-color: var(--color-border-hover);
     outline: none;
 }
+
+.input-field::placeholder {
+    color: var(--color-text-soft);
+}
+

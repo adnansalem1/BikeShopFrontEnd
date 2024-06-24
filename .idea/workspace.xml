@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue, Button style update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductHome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
     </list>
@@ -150,7 +153,7 @@
       <workItem from="1717575845537" duration="2579000" />
       <workItem from="1718783077645" duration="54239000" />
       <workItem from="1719230350679" duration="229000" />
-      <workItem from="1719230790405" duration="5974000" />
+      <workItem from="1719230790405" duration="15153000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -496,14 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719233679488</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="bootstrap APP.Vue, Button style update">
+      <option name="closed" value="true" />
+      <created>1719257674159</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1719257674159</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="typescript" />
     <MESSAGE value="Vite-Setup" />
     <MESSAGE value="Vite-Setup BASE URL Update" />
     <MESSAGE value="Vite-Setup BASE URL Update 2" />
@@ -528,7 +538,8 @@
     <MESSAGE value="ProductHome.vue async mounted() changed -3" />
     <MESSAGE value="bootstrap@5.3.3 installed" />
     <MESSAGE value="bootstrap APP.Vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue" />
+    <MESSAGE value="bootstrap APP.Vue, Button style update" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue, Button style update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

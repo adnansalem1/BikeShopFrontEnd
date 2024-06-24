@@ -1,26 +1,36 @@
-<<template>
+<template>
   <div class="products-home">
     <h1>Fahrräder</h1>
     <div class="search-container">
       <input
           v-model="searchQuery"
           placeholder="Suche nach einem Produkt..."
-          class="input-field"
+          class="form-control"
       />
     </div>
     <div class="filter-container">
-      <select v-model="sortKey" @change="sortProducts">
-        <option class="dropdown btn btn-outline-success" value="name">Name</option>
-        <option class="dropdown btn btn-outline-success btn" value="beschreibung">Beschreibung</option>
-        <option class="dropdown btn btn-outline-success btn" value="preis">Preis</option>
-      </select>
-      <select v-model="sortOrder" @change="sortProducts">
-        <option class="dropdown btn btn-outline-success btn" value="asc">Aufsteigend</option>
-        <option class="dropdown btn btn-outline-success btn" value="desc">Absteigend</option>
-      </select>
+      <div class="dropdown" @click="toggleDropdown('sortDropdown')">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" aria-expanded="false">
+          Sortieren nach
+        </button>
+        <div class="dropdown-menu" :class="{ show: dropdowns.sortDropdown }" aria-labelledby="sortDropdown">
+          <a class="dropdown-item" @click="updateSortKey('name')">Name</a>
+          <a class="dropdown-item" @click="updateSortKey('beschreibung')">Beschreibung</a>
+          <a class="dropdown-item" @click="updateSortKey('preis')">Preis</a>
+        </div>
+      </div>
+      <div class="dropdown" @click="toggleDropdown('orderDropdown')">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="orderDropdown" aria-expanded="false">
+          Reihenfolge
+        </button>
+        <div class="dropdown-menu" :class="{ show: dropdowns.orderDropdown }" aria-labelledby="orderDropdown">
+          <a class="dropdown-item" @click="updateSortOrder('asc')">Aufsteigend</a>
+          <a class="dropdown-item" @click="updateSortOrder('desc')">Absteigend</a>
+        </div>
+      </div>
     </div>
-    <ul>
-      <li v-for="product in filteredProducts" :key="product.id">
+    <ul class="list-group">
+      <li v-for="product in filteredProducts" :key="product.id" class="list-group-item">
         {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
       </li>
     </ul>
@@ -36,7 +46,11 @@ export default {
       sortKey: 'name',
       sortOrder: 'asc',
       items: [],
-      filteredProducts: []
+      filteredProducts: [],
+      dropdowns: {
+        sortDropdown: false,
+        orderDropdown: false
+      }
     };
   },
   methods: {
@@ -63,6 +77,15 @@ export default {
         return 0;
       });
       this.filteredProducts = result;
+    },
+    updateSortKey(key) {
+      this.sortKey = key;
+    },
+    updateSortOrder(order) {
+      this.sortOrder = order;
+    },
+    toggleDropdown(dropdown) {
+      this.dropdowns[dropdown] = !this.dropdowns[dropdown];
     }
   },
   watch: {
@@ -78,7 +101,7 @@ export default {
   },
   async mounted() {
     try {
-      const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`) //fetch('http://localhost:8080/anzeigen') // URL anpassen an die eigene Backend-URL und den Endpunkt für die Produkte laden
+      const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
       if (response.ok) {
         this.items = await response.json();
         this.filterProducts(); // Filter und Sortierung nach dem Laden
@@ -96,46 +119,71 @@ export default {
 .products-home {
   max-width: 800px;
   margin: 0 auto;
-  accent-color: #19c641
-  !important;
+  padding: 1rem;
+
 }
 .search-container {
   margin-bottom: 1rem;
-  align-items: center;
 }
-.input-field {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  margin-right: 1rem;
-}
-
 .filter-container {
   margin-bottom: 1rem;
-  align-items: center;
+  display: flex;
+  gap: 1rem;
 }
-
-select {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  margin-right: 1rem;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
+.list-group-item {
   margin-bottom: 0.5rem;
 }
 p {
   color: red;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+}
+.dropdown-item:focus, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
 }
 
 </style>
