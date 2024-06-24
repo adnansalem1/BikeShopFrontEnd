@@ -2,9 +2,10 @@
   <header class="header">
     <div class="wrapper">
       <nav>
-        <router-link to="/products-home">Produkte Home</router-link>
+        <router-link to="/products-home"> <button class="shadow-sm btn btn-outline-primary me-2">Produkte Home</button></router-link>
 
-        <RouterLink to="/ProductList" class="nav-link">Products</RouterLink>
+
+        <router-link to="/ProductList"> <button class="shadow-sm btn btn-outline-primary">Products</button></router-link>
       </nav>
     </div>
   </header>
