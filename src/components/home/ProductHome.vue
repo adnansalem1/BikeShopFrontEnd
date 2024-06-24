@@ -77,7 +77,7 @@ export default {
   },
   async mounted() {
     try {
-      const response = await fetch('http://localhost:8080/anzeigen');
+      const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`) //fetch('http://localhost:8080/anzeigen') // URL anpassen an die eigene Backend-URL und den Endpunkt für die Produkte laden
       if (response.ok) {
         this.items = await response.json();
         this.filterProducts(); // Filter und Sortierung nach dem Laden
