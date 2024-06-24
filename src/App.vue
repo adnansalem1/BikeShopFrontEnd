@@ -2,10 +2,8 @@
   <header class="header">
     <div class="wrapper">
       <nav>
-        <router-link to="/products-home"> <button class="shadow-sm btn btn-outline-primary me-2">Produkte Home</button></router-link>
-
-
-        <router-link to="/ProductList"> <button class="shadow-sm btn btn-outline-primary">Products</button></router-link>
+        <router-link to="/products-home"> <button class="shadow-sm btn btn-outline-primary me-2">Home</button></router-link>
+        <router-link to="/ProductList"> <button class="shadow-sm btn btn-outline-primary">Produkte</button></router-link>
       </nav>
     </div>
   </header>
@@ -55,8 +53,15 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  line-height: 1.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  line-height: 3;
   max-height: 100vh;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #app {
@@ -69,7 +74,7 @@ onMounted(() => {
 }
 
 html, body {
-    background-color: #90ee90; /* Light green */
+  background-color: #90ee90; /* Light green */
   margin: 0;
   padding: 0;
   height: 100%;

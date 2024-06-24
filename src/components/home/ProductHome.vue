@@ -10,12 +10,13 @@
     </div>
     <div class="filter-container">
       <select v-model="sortKey" @change="sortProducts">
-        <option value="name">Name</option>
-        <option value="preis">Preis</option>
+        <option class="dropdown btn btn-outline-success" value="name">Name</option>
+        <option class="dropdown btn btn-outline-success btn" value="beschreibung">Beschreibung</option>
+        <option class="dropdown btn btn-outline-success btn" value="preis">Preis</option>
       </select>
       <select v-model="sortOrder" @change="sortProducts">
-        <option value="asc">Aufsteigend</option>
-        <option value="desc">Absteigend</option>
+        <option class="dropdown btn btn-outline-success btn" value="asc">Aufsteigend</option>
+        <option class="dropdown btn btn-outline-success btn" value="desc">Absteigend</option>
       </select>
     </div>
     <ul>
@@ -92,26 +93,49 @@ export default {
 </script>
 
 <style scoped>
-.products-home h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.products-home {
+  max-width: 800px;
+  margin: 0 auto;
+  accent-color: #19c641
+  !important;
 }
-.search-container, .filter-container {
-  margin-bottom: 20px;
-  text-align: center;
+.search-container {
+  margin-bottom: 1rem;
+  align-items: center;
 }
-.input-field, select {
-  padding: 8px;
-  margin-right: 10px;
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
 }
-.products-home ul {
-  list-style: none;
+
+.filter-container {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+ul {
+  list-style-type: none;
   padding: 0;
 }
-.products-home li {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+li {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
 }
+p {
+  color: red;
+}
+
 </style>

@@ -20,13 +20,13 @@
               placeholder="Price"
               class="input-field"
           />
-          <button @click="saveProduct" class="button save-button">Save</button>
-          <button @click="cancelEdit" class="button cancel-button">Cancel</button>
+          <button @click="saveProduct" class="shadow-sm btn btn-outline-success">Speichern</button>
+          <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">Abbrechen</button>
         </div>
         <div v-else>
           {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
-          <button @click="editProduct(product)" class="button edit-button">Edit</button>
-          <button @click="deleteProduct(product.id)" class="button delete-button">Delete</button>
+          <button @click="editProduct(product)" class="shadow-sm btn btn-success me-1">Bearbeiten</button>
+          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-danger">Löschen</button>
         </div>
       </li>
     </ul>
@@ -53,14 +53,18 @@
             class="input-field"
             required
         />
-        <button type="submit" class="button add-button"> Hinzufügen</button>
+        <button class="shadow-sm btn btn-outline-primary ">Hinzufügen</button>
+
       </form>
     </div>
   </div>
 </template>
 
 <script>
+import {RouterLink} from "vue-router";
+
 export default {
+  components: {RouterLink},
   data() {
     return {
       searchQuery: "",
@@ -169,84 +173,47 @@ export default {
 </script>
 
 <style scoped>
-@import '../../assets/style.css';
-
+.product-item {
+  margin-bottom: 1rem;
+}
+.input-field {
+  margin-right: 1rem;
+}
 .button {
-  background-color: #0c77e3;
-  border: 1px solid #ced4da;
+  padding: 0.5rem 1rem;
+  border: none;
   border-radius: 0.25rem;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-
-  margin-left: 0.5rem;
 }
-
-.button:hover {
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
-}
-
 .save-button {
   background-color: #28a745;
-  border-color: #28a745;
   color: white;
-  margin-right: 0.5rem;
 }
-
-.save-button:hover {
-  background-color: #218838;
-  border-color: #19c641;
-}
-
 .cancel-button {
   background-color: #dc3545;
-  border-color: #dc3545;
   color: white;
 }
-
-.cancel-button:hover {
-  background-color: #c82333;
-  border-color: #bd2130;
-}
-
-.add-button {
+.edit-button {
   background-color: #007bff;
-  border-color: #007bff;
   color: white;
 }
-
-.add-button:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
 .delete-button {
   background-color: #dc3545;
-  border-color: #dc3545;
+  color: white;
+}
+.add-button {
+  background-color: #007bff;
   color: white;
 }
 
-.delete-button:hover {
-  background-color: #c82333;
-  border-color: #bd2130;
-}
-
-.edit-button {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-  color: white;
-}
-
-.edit-button:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-}
 </style>
 
 <style scoped>
-@import '../../assets/style.css';
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.form-container {
+  margin-top: 2rem;
+}
 </style>

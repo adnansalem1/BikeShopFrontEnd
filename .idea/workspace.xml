@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap@5.3.3 installed">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,7 @@
       <workItem from="1717575845537" duration="2579000" />
       <workItem from="1718783077645" duration="54239000" />
       <workItem from="1719230350679" duration="229000" />
-      <workItem from="1719230790405" duration="1804000" />
+      <workItem from="1719230790405" duration="5974000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -490,14 +488,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719227797895</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="bootstrap APP.Vue">
+      <option name="closed" value="true" />
+      <created>1719233679487</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1719233679488</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Env" />
     <MESSAGE value="typescript" />
     <MESSAGE value="Vite-Setup" />
     <MESSAGE value="Vite-Setup BASE URL Update" />
@@ -522,7 +527,8 @@
     <MESSAGE value="ProductHome.vue async mounted() changed -2" />
     <MESSAGE value="ProductHome.vue async mounted() changed -3" />
     <MESSAGE value="bootstrap@5.3.3 installed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap@5.3.3 installed" />
+    <MESSAGE value="bootstrap APP.Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
