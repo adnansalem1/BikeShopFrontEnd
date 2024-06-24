@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="New Classes">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Style changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductHome.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <workItem from="1716815778299" duration="5050000" />
       <workItem from="1717575634734" duration="190000" />
       <workItem from="1717575845537" duration="2579000" />
-      <workItem from="1718783077645" duration="45335000" />
+      <workItem from="1718783077645" duration="46375000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -443,14 +443,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719008913265</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Style changed">
+      <option name="closed" value="true" />
+      <created>1719214485604</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1719214485604</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted optional Dependencies&#10;fsevents&quot;: &quot;^2.3.3" />
     <MESSAGE value="Root" />
     <MESSAGE value="new structure" />
     <MESSAGE value="new structure 2" />
@@ -475,7 +482,8 @@
     <MESSAGE value="Methoden Update, Search" />
     <MESSAGE value="Methode Update" />
     <MESSAGE value="New Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Classes" />
+    <MESSAGE value="Style changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
