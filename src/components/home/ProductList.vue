@@ -52,6 +52,7 @@
             placeholder="Preis"
             class="input-field"
             required
+            min="0"
         />
         <button class="shadow-sm btn btn-outline-primary">Hinzufügen</button>
       </form>

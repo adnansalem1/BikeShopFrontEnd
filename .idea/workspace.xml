@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="DropDown Button style update">
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,44 +55,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Profiler#1",
-    "Jest.HelloWorld.executor": "Run",
-    "Jest.HelloWorld.renders properly.executor": "Run",
-    "Jest.HelloWorld.spec.ts.executor": "Run",
-    "Jest.example.test.js.executor": "Run",
-    "Node.js.Unnamed.executor": "Run",
-    "Node.js.example.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Vitest.HelloWorld.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/adnansalem/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.test.executor": "Run",
-    "prettier.import.notification.dismissed": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.vue",
-    "ts.external.directory.path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Profiler#1&quot;,
+    &quot;Jest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.renders properly.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.spec.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.example.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/adnansalem/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.vue&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/home" />
@@ -168,6 +165,7 @@
       <workItem from="1719230790405" duration="19783000" />
       <workItem from="1719387529637" duration="582000" />
       <workItem from="1719388126531" duration="309000" />
+      <workItem from="1719388465356" duration="2269000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -537,14 +535,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719270824105</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="DropDown Button style update">
+      <option name="closed" value="true" />
+      <created>1719389891684</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1719389891684</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vite-Setup BASE URL Update 2" />
     <MESSAGE value="Vite-Setup BASE URL Update 3" />
     <MESSAGE value="rename Env" />
     <MESSAGE value="rename Env 2" />
@@ -569,7 +574,8 @@
     <MESSAGE value="bootstrap APP.Vue, Button style update" />
     <MESSAGE value="bootstrap APP.Vue, Button style update &#10;popUp window" />
     <MESSAGE value="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper" />
+    <MESSAGE value="DropDown Button style update" />
+    <option name="LAST_COMMIT_MESSAGE" value="DropDown Button style update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
