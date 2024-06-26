@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue, Button style update &#10;popUp window">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ProductList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Profiler#1",
     "Jest.HelloWorld.executor": "Run",
     "Jest.HelloWorld.renders properly.executor": "Run",
     "Jest.HelloWorld.spec.ts.executor": "Run",
@@ -71,6 +68,7 @@
     "Node.js.Unnamed.executor": "Run",
     "Node.js.example.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Vitest.HelloWorld.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -107,7 +105,14 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -118,6 +123,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -155,7 +165,9 @@
       <workItem from="1717575845537" duration="2579000" />
       <workItem from="1718783077645" duration="54239000" />
       <workItem from="1719230350679" duration="229000" />
-      <workItem from="1719230790405" duration="19049000" />
+      <workItem from="1719230790405" duration="19783000" />
+      <workItem from="1719387529637" duration="582000" />
+      <workItem from="1719388126531" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -517,14 +529,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719267126677</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper">
+      <option name="closed" value="true" />
+      <created>1719270824105</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1719270824105</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vite-Setup BASE URL Update" />
     <MESSAGE value="Vite-Setup BASE URL Update 2" />
     <MESSAGE value="Vite-Setup BASE URL Update 3" />
     <MESSAGE value="rename Env" />
@@ -549,7 +568,8 @@
     <MESSAGE value="bootstrap APP.Vue" />
     <MESSAGE value="bootstrap APP.Vue, Button style update" />
     <MESSAGE value="bootstrap APP.Vue, Button style update &#10;popUp window" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue, Button style update &#10;popUp window" />
+    <MESSAGE value="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

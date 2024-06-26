@@ -174,7 +174,6 @@ export default {
         console.log("Geladene Produkte:", products);
         this.products = products;
         this.filterProducts();
-        this.setMessage('Produkte erfolgreich geladen!');
       } catch (error) {
         console.error("Error loading products:", error);
       }

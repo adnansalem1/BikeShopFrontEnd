@@ -10,17 +10,16 @@
     </div>
     <div class="filter-container">
       <div class="dropdown" @click="toggleDropdown('sortDropdown')">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" aria-expanded="false">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="sortDropdown" aria-expanded="false">
           Sortieren nach
         </button>
         <div class="dropdown-menu" :class="{ show: dropdowns.sortDropdown }" aria-labelledby="sortDropdown">
           <a class="dropdown-item" @click="updateSortKey('name')">Name</a>
-          <a class="dropdown-item" @click="updateSortKey('beschreibung')">Beschreibung</a>
           <a class="dropdown-item" @click="updateSortKey('preis')">Preis</a>
         </div>
       </div>
       <div class="dropdown" @click="toggleDropdown('orderDropdown')">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="orderDropdown" aria-expanded="false">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="orderDropdown" aria-expanded="false">
           Reihenfolge
         </button>
         <div class="dropdown-menu" :class="{ show: dropdowns.orderDropdown }" aria-labelledby="orderDropdown">
@@ -36,6 +35,7 @@
     </ul>
     <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
   </div>
+
 </template>
 
 <script>
@@ -86,6 +86,12 @@ export default {
     },
     toggleDropdown(dropdown) {
       this.dropdowns[dropdown] = !this.dropdowns[dropdown];
+      // Schließe andere Dropdowns
+      for (const key in this.dropdowns) {
+        if (key !== dropdown) {
+          this.dropdowns[key] = false;
+        }
+      }
     }
   },
   watch: {
@@ -185,5 +191,4 @@ p {
   text-decoration: none;
   background-color: #007bff;
 }
-
 </style>
