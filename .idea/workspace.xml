@@ -4,17 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Price should be positive">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Dark mode">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_5_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_5_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testVue.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testVue.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductComponent.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testVue.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ProductHome.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ProductHome.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ProductList.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ProductList.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProducktHomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProductListView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProductListView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/testVue">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,7 +116,13 @@
     &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent.test.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductHome.vue.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Should have 5 odd numbers in [1, 10].executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd&quot;,
@@ -98,21 +150,27 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/home" />
       <recent name="$PROJECT_DIR$/src/views" />
-      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Vitest.ProductComponent.test.ts">
+    <configuration name="ProductComponent.test.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/ProductComponent.test.ts" />
+      <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -126,7 +184,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Vitest.ProductComponent.test.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +229,12 @@
       <workItem from="1719388126531" duration="309000" />
       <workItem from="1719388465356" duration="4483000" />
       <workItem from="1719395439702" duration="5248000" />
-      <workItem from="1719420705601" duration="3851000" />
+      <workItem from="1719420705601" duration="4552000" />
+      <workItem from="1719425298719" duration="166000" />
+      <workItem from="1719425511395" duration="239000" />
+      <workItem from="1719425755749" duration="1289000" />
+      <workItem from="1719427319872" duration="1712000" />
+      <workItem from="1719429043360" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="NPM &#10;Vue.js&#10;Node&#10;installiert">
       <option name="closed" value="true" />
@@ -557,14 +620,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719391182845</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Dark mode">
+      <option name="closed" value="true" />
+      <created>1719424907527</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1719424907527</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rename Env" />
     <MESSAGE value="rename Env 2" />
     <MESSAGE value="View, Home, non using classes deleted" />
     <MESSAGE value="Implement axios for API calls and handle CORS issues" />
@@ -589,7 +659,8 @@
     <MESSAGE value="bootstrap APP.Vue, Button style update &#10;popUp window version 2&#10;&#10;warrper" />
     <MESSAGE value="DropDown Button style update" />
     <MESSAGE value="Price should be positive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Price should be positive" />
+    <MESSAGE value="Dark mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dark mode" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

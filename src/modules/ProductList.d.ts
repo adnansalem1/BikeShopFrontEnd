@@ -1,4 +1,4 @@
-declare module '@/components/home/ProductList.vue' {
+declare module '@/components/ProductList.vue' {
     import { ComponentOptions } from 'vue';
     const component: ComponentOptions;
     export default component;

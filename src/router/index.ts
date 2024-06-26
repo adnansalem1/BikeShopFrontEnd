@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import ProductListView from '../views/ProductListView.vue';
-import ProductHome from '@/components/home/ProductHome.vue';
+import ProductHome from '@/components/ProductHome.vue';
 
 const routes = [
   {
