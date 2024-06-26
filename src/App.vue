@@ -9,6 +9,10 @@
           <router-link to="/ProductList" class="nav-link">Produkte</router-link>
         </li>
       </ul>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch" v-model="darkMode" @change="toggleDarkMode">
+        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+      </div>
     </div>
   </header>
   <div id="app">
@@ -52,18 +56,29 @@ const items = ref<Anzeige[]>([]), loadThings = () => {
       .catch(error => console.error('Fetch error:', error));
 };
 
+const darkMode = ref(false), toggleDarkMode = () => {
+  document.body.classList.toggle('dark-mode');
+};
+
 onMounted(() => {
   loadThings();
+
+  if (localStorage.getItem('darkMode') === 'true') {
+    darkMode.value = true;
+    toggleDarkMode();
+  }
+
 });
 </script>
 
 
 <style scoped>
+
 .header {
   position: fixed;
   top: 0;
-  left: 0.5rem;
-  right: 0.5rem;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +88,6 @@ onMounted(() => {
   max-height: 10vh;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
 }
 
 #app {
@@ -92,8 +106,10 @@ html, body {
   padding: 0;
   height: 100%;
 }
-
 .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -113,4 +129,52 @@ html, body {
 .nav-pills .nav-link:focus {
   background-color: #0056b3;
 }
+
+.dark-mode .header {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .nav-pills .nav-link {
+  color: #fff;
+}
+
+.dark-mode .nav-pills .nav-link:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode .nav-pills .nav-link:focus {
+  background-color: #0056b3;
+}
+
+.dark-mode .header {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #app {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .wrapper {
+  color: #fff;
+}
+
+.dark-mode .nav-pills .nav-link {
+  color: #fff;
+}
+
+.dark-mode .nav-pills .nav-link.active {
+  background-color: #007bff;
+}
+
+.dark-mode .nav-pills .nav-link:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode .nav-pills .nav-link:focus {
+  background-color: #0056b3;
+}
+
 </style>
