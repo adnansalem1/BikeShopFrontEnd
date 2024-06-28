@@ -1,45 +1,86 @@
-# vue-project
+# Fahrradgeschäft-Anwendung
 
-This template should help get you started developing with Vue 3 in Vite.
+Dieses Vue.js-Projekt wurde entwickelt, um Fahrradprodukte für ein Fahrradgeschäft zu verwalten. Es umfasst Funktionen zum Auflisten von Fahrrädern, Hinzufügen neuer Produkte, Bearbeiten bestehender Einträge und Löschen derselben. Die Anwendung nutzt ein modernes Frontend-Framework, Vue.js, mit einem Vite-Build-Tool für eine schnelle Entwicklungsumgebung.
 
-## Recommended IDE Setup
+## Funktionen
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Fahrräder auflisten**: Alle verfügbaren Fahrräder im Geschäft anzeigen.
+- **Fahrrad hinzufügen**: Neue Fahrradeinträge zum Inventar hinzufügen.
+- **Fahrrad bearbeiten**: Details vorhandener Fahrräder aktualisieren.
+- **Fahrrad löschen**: Fahrräder aus dem Inventar entfernen.
+- **Dunkelmodus**: Dunkelmodus für bessere Sichtbarkeit bei schlechten Lichtverhältnissen umschalten.
 
-## Type Support for `.vue` Imports in TS
+## Voraussetzungen
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Bevor Sie beginnen, stellen Sie sicher, dass Sie folgendes installiert haben:
+- [Node.js](https://nodejs.org/de/) (Version 12.x oder höher)
+- [npm](https://www.npmjs.com/) (Kommt in der Regel mit Node.js)
 
-## Customize configuration
+## Empfohlene IDE-Einrichtung
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Für die beste Entwicklungserfahrung verwenden Sie [Visual Studio Code](https://code.visualstudio.com/) mit der Erweiterung [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (deaktivieren Sie Vetur für Vue 3-Projekte).
 
-## Project Setup
+## Installation
 
-```sh
-npm install
-```
+Folgen Sie diesen Schritten, um die Umgebung einzurichten:
 
-### Compile and Hot-Reload for Development
+1. **Repository klonen:**
+   ```sh
+   git clone https://github.com/Ihr-Benutzername/bikeshop-frontend.git
+   cd bikeshop-frontend
+   ```
 
-```sh
-npm run dev
-```
+2. **Abhängigkeiten installieren:**
+   ```sh
+   npm install
+   ```
 
-### Type-Check, Compile and Minify for Production
+3. **Umgebungsvariablen einrichten:**
+    - Kopieren Sie die Datei `.env.example` in `.env` und passen Sie die Backend-URL an, um auf Ihren Backend-Service zu zeigen.
 
-```sh
-npm run build
-```
+## Die Anwendung betreiben
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Um die Anwendung lokal zu betreiben:
 
+1. **Entwicklungsserver starten:**
+   ```sh
+   npm run dev
+   ```
+   Dieser Befehl führt die App im Entwicklungsmodus aus. Öffnen Sie http://localhost:3000, um sie im Browser zu sehen. Die Seite wird automatisch neu geladen, wenn Sie Änderungen vornehmen.
+
+2. **Für die Produktion bauen:**
+   ```sh
+   npm run build
+   ```
+   Erstellt die App für die Produktion im `dist`-Ordner. Es optimiert das Build für die beste Leistung.
+
+3. **Produktionsbuild voranschauen:**
+   ```sh
+   npm run preview
+   ```
+
+## Tests
+
+Führen Sie Ihre Unit-Tests mit folgendem Befehl aus:
 ```sh
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Linting
 
+Linten und Dateien korrigieren mit:
 ```sh
 npm run lint
 ```
+
+## Bereitstellung
+
+Stellen Sie das Produktions-Build bereit, indem Sie den Inhalt des `dist`-Ordners auf Ihren bevorzugten Anbieter für statisches Hosting hochladen (z.B. Netlify, Vercel, Amazon S3).
+
+## Mitwirken
+
+Beiträge sind immer willkommen! Sehen Sie `contributing.md` für Möglichkeiten, um anzufangen. Bitte halten Sie sich an den `Code of Conduct` dieses Projekts.
+
+## Lizenz
+
+Verteilt unter der MIT-Lizenz. Siehe `LICENSE` für weitere Informationen.
