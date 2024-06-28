@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Tests Changes 3">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="CSS Update">
+      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,84 +54,81 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;adnansalem1&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/adnansalem1/BikeShopFrontEnd.git&quot;,
     &quot;accountId&quot;: &quot;a3aab4db-f110-4559-99ad-d7180bd498dc&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/components/home/ProductList.vue" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
+    &quot;isMigrated&quot;: true
+    }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
+    &quot;customColor&quot;: &quot;&quot;,
+    &quot;associatedIndex&quot;: 3
+    }</component>
   <component name="ProjectId" id="2g8cGT5hdGJkvdQ7fuGOj2ySSPQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Profiler#1",
-    "Jest.HelloWorld.executor": "Run",
-    "Jest.HelloWorld.renders properly.executor": "Run",
-    "Jest.HelloWorld.spec.ts.executor": "Run",
-    "Jest.ProductHome.spec.ts.executor": "Run",
-    "Jest.Tests in tests/.executor": "Run",
-    "Jest.example.test.js.executor": "Run",
-    "Node.js.Unnamed.executor": "Run",
-    "Node.js.example.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Vitest.All Tests.executor": "Run",
-    "Vitest.HelloWorld.executor": "Run",
-    "Vitest.ProductComponent (1).executor": "Run",
-    "Vitest.ProductComponent.executor": "Run",
-    "Vitest.ProductComponent.test.ts.executor": "Run",
-    "Vitest.ProductHome.spec.ts.executor": "Run",
-    "Vitest.ProductHome.vue.executor": "Run",
-    "Vitest.Should have 5 odd numbers in [1, 10].executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.test.executor": "Run",
-    "prettier.import.notification.dismissed": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Profiler#1&quot;,
+    &quot;Jest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.renders properly.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.HelloWorld.spec.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.example.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductComponent.test.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.ProductHome.vue.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Should have 5 odd numbers in [1, 10].executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/adnansalem/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -139,14 +142,14 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="ProductHome.spec.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductComponent.test.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/tests/unit/ProductHome.spec.ts" />
+      <test-file value="$PROJECT_DIR$/ProductComponent.test.ts" />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -161,7 +164,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.ProductHome.spec.ts" />
+        <item itemvalue="Vitest.ProductComponent.test.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -215,8 +218,47 @@
       <workItem from="1719572861421" duration="33000" />
       <workItem from="1719587739998" duration="8000" />
       <workItem from="1719590051500" duration="75000" />
-      <workItem from="1719590280296" duration="21509000" />
-      <workItem from="1719612424841" duration="3915000" />
+      <workItem from="1719590280296" duration="20100000" />
+    </task>
+    <task id="LOCAL-00004" summary="dependencies">
+      <option name="closed" value="true" />
+      <created>1716554771153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554771153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dependencies 2">
+      <option name="closed" value="true" />
+      <created>1716554883280</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554883280</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dependencies 3">
+      <option name="closed" value="true" />
+      <created>1716555340789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555340789</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dependencies 4">
+      <option name="closed" value="true" />
+      <created>1716555817935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555817935</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dependencies 5">
+      <option name="closed" value="true" />
+      <created>1716556590770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716556590770</updated>
     </task>
     <task id="LOCAL-00009" summary="OS auf Linux">
       <option name="closed" value="true" />
@@ -570,53 +612,18 @@
       <option name="project" value="LOCAL" />
       <updated>1719603742659</updated>
     </task>
-    <task id="LOCAL-00053" summary="language-switcher">
-      <option name="closed" value="true" />
-      <created>1719611354765</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1719611354765</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Tests Changes">
-      <option name="closed" value="true" />
-      <created>1719615171437</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1719615171437</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Tests Changes 1">
-      <option name="closed" value="true" />
-      <created>1719615494396</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1719615494396</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Tests Changes 2">
-      <option name="closed" value="true" />
-      <created>1719615751142</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1719615751142</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Tests Changes 3">
-      <option name="closed" value="true" />
-      <created>1719615839186</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1719615839186</updated>
-    </task>
-    <option name="localTasksCounter" value="58" />
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Delete Navbar.vue und V.heading.vue" />
+    <MESSAGE value="POST-Anfragen" />
+    <MESSAGE value="POST-Anfragen 2" />
+    <MESSAGE value="Auto Load" />
+    <MESSAGE value=" Detailed commit message&#10; Add delete product functionality and button&#10;&#10;- Added a delete button to each product in the product list&#10;- Implemented deleteProduct method in ProductList component&#10;- The deleteProduct method sends a DELETE request to the backend&#10;- Products are removed from the local list upon successful deletion" />
     <MESSAGE value="Style" />
     <MESSAGE value="Methoden Update" />
     <MESSAGE value="Methoden Update, Search" />
@@ -637,12 +644,7 @@
     <MESSAGE value="Tests class" />
     <MESSAGE value="README.md Update" />
     <MESSAGE value="CSS Update" />
-    <MESSAGE value="language-switcher" />
-    <MESSAGE value="Tests Changes" />
-    <MESSAGE value="Tests Changes 1" />
-    <MESSAGE value="Tests Changes 2" />
-    <MESSAGE value="Tests Changes 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests Changes 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
