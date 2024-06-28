@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="language-switcher">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductComponent.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/setupTests.js" beforeDir="false" />
-    </list>
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Tests Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,15 +212,7 @@
       <workItem from="1719587739998" duration="8000" />
       <workItem from="1719590051500" duration="75000" />
       <workItem from="1719590280296" duration="21509000" />
-      <workItem from="1719612424841" duration="2640000" />
-    </task>
-    <task id="LOCAL-00005" summary="dependencies 2">
-      <option name="closed" value="true" />
-      <created>1716554883280</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1716554883280</updated>
+      <workItem from="1719612424841" duration="2955000" />
     </task>
     <task id="LOCAL-00006" summary="dependencies 3">
       <option name="closed" value="true" />
@@ -613,14 +598,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719611354765</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Tests Changes">
+      <option name="closed" value="true" />
+      <created>1719615171437</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1719615171437</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="POST-Anfragen" />
     <MESSAGE value="POST-Anfragen 2" />
     <MESSAGE value="Auto Load" />
     <MESSAGE value=" Detailed commit message&#10; Add delete product functionality and button&#10;&#10;- Added a delete button to each product in the product list&#10;- Implemented deleteProduct method in ProductList component&#10;- The deleteProduct method sends a DELETE request to the backend&#10;- Products are removed from the local list upon successful deletion" />
@@ -645,7 +637,8 @@
     <MESSAGE value="README.md Update" />
     <MESSAGE value="CSS Update" />
     <MESSAGE value="language-switcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="language-switcher" />
+    <MESSAGE value="Tests Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests Changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
