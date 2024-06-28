@@ -10,6 +10,17 @@ Dieses Vue.js-Projekt wurde entwickelt, um Fahrradprodukte für ein Fahrradgesch
 - **Fahrrad löschen**: Fahrräder aus dem Inventar entfernen.
 - **Dunkelmodus**: Dunkelmodus für bessere Sichtbarkeit bei schlechten Lichtverhältnissen umschalten.
 
+## Technologien
+- **Suchfunktion**: Schnelles Auffinden von Fahrrädern durch Eingabe von Schlüsselwörtern.
+- **Sortierung**: Sortieren von Fahrrädern nach Preis oder Namen in auf- oder absteigender Reihenfolge.
+- **Filterung**: Filtern von Fahrrädern nach Kategorie oder Preisbereich.
+- **Validierung**: Eingabeüberprüfung für Formulare, um sicherzustellen, dass nur gültige Daten gespeichert werden.
+- **Benachrichtigungen**: Anzeigen von Benachrichtigungen für Benutzeraktionen wie Hinzufügen, Bearbeiten oder Löschen von Fahrrädern.
+- **Lokalisierung**: Unterstützung für mehrere Sprachen, um die Anwendung in verschiedenen Regionen zu verwenden.
+- **Zustandsverwaltung**: Verwendung von Vuex für die zentrale Speicherung von Anwendungsdaten.
+- **Routing**: Verwendung von Vue Router für die Navigation zwischen verschiedenen Ansichten.
+
+
 ## Voraussetzungen
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie folgendes installiert haben:

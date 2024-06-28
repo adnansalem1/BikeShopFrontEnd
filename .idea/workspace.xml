@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="CSS Update">
-      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="language-switcher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductComponent.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +88,8 @@
     "Jest.HelloWorld.executor": "Run",
     "Jest.HelloWorld.renders properly.executor": "Run",
     "Jest.HelloWorld.spec.ts.executor": "Run",
+    "Jest.ProductHome.spec.ts.executor": "Run",
+    "Jest.Tests in tests/.executor": "Run",
     "Jest.example.test.js.executor": "Run",
     "Node.js.Unnamed.executor": "Run",
     "Node.js.example.js.executor": "Run",
@@ -101,6 +100,7 @@
     "Vitest.ProductComponent (1).executor": "Run",
     "Vitest.ProductComponent.executor": "Run",
     "Vitest.ProductComponent.test.ts.executor": "Run",
+    "Vitest.ProductHome.spec.ts.executor": "Run",
     "Vitest.ProductHome.vue.executor": "Run",
     "Vitest.Should have 5 odd numbers in [1, 10].executor": "Run",
     "git-widget-placeholder": "main",
@@ -110,7 +110,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/adnansalem/node_modules/jest",
+    "nodejs.jest.jest_package": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "npm.test.executor": "Run",
@@ -142,14 +142,14 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="ProductComponent.test.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductHome.spec.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/ProductComponent.test.ts" />
+      <test-file value="$PROJECT_DIR$/tests/unit/ProductHome.spec.ts" />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -164,7 +164,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.ProductComponent.test.ts" />
+        <item itemvalue="Vitest.ProductHome.spec.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -218,15 +218,8 @@
       <workItem from="1719572861421" duration="33000" />
       <workItem from="1719587739998" duration="8000" />
       <workItem from="1719590051500" duration="75000" />
-      <workItem from="1719590280296" duration="20100000" />
-    </task>
-    <task id="LOCAL-00004" summary="dependencies">
-      <option name="closed" value="true" />
-      <created>1716554771153</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1716554771153</updated>
+      <workItem from="1719590280296" duration="21509000" />
+      <workItem from="1719612424841" duration="2640000" />
     </task>
     <task id="LOCAL-00005" summary="dependencies 2">
       <option name="closed" value="true" />
@@ -612,14 +605,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719603742659</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="language-switcher">
+      <option name="closed" value="true" />
+      <created>1719611354765</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1719611354765</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete Navbar.vue und V.heading.vue" />
     <MESSAGE value="POST-Anfragen" />
     <MESSAGE value="POST-Anfragen 2" />
     <MESSAGE value="Auto Load" />
@@ -644,7 +644,8 @@
     <MESSAGE value="Tests class" />
     <MESSAGE value="README.md Update" />
     <MESSAGE value="CSS Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS Update" />
+    <MESSAGE value="language-switcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="language-switcher" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
