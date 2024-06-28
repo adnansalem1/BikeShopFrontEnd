@@ -24,6 +24,10 @@
     --padding-base: 10px;
     --padding-large: 20px;
     --border-radius: 0.25rem;
+
+    --text-color: #333;
+    --background-color: #fff;
+    --dark-background-color: #282c34;
 }
 
 body {
@@ -35,6 +39,11 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+.dark-mode {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
 }
 
 body.dark-mode {
@@ -461,3 +470,4 @@ p {
     color: #fff;
     background-color: var(--primary-color);
 }
+

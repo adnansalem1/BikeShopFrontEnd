@@ -1,30 +1,30 @@
 <template>
   <div class="products-home">
-    <h1>Fahrräder</h1>
+    <h1>{{ $t('message.products') }}</h1>
     <div class="search-container">
       <input
           v-model="searchQuery"
-          placeholder="Suche nach einem Produkt..."
+          :placeholder="$t('message.searchProduct')"
           class="form-control"
       />
     </div>
     <div class="filter-container">
       <div class="dropdown" @click="toggleDropdown('sortDropdown')">
         <button class="btn btn-outline-primary dropdown-toggle" type="button" id="sortDropdown" aria-expanded="false">
-          Sortieren nach
+          {{ $t('message.sortBy') }}
         </button>
         <div class="dropdown-menu" :class="{ show: dropdowns.sortDropdown }" aria-labelledby="sortDropdown">
-          <a class="dropdown-item" @click="updateSortKey('name')">Name</a>
-          <a class="dropdown-item" @click="updateSortKey('preis')">Preis</a>
+          <a class="dropdown-item" @click="updateSortKey('name')">{{ $t('message.name') }}</a>
+          <a class="dropdown-item" @click="updateSortKey('preis')">{{ $t('message.price') }}</a>
         </div>
       </div>
       <div class="dropdown" @click="toggleDropdown('orderDropdown')">
         <button class="btn btn-outline-primary dropdown-toggle" type="button" id="orderDropdown" aria-expanded="false">
-          Reihenfolge
+          {{ $t('message.order') }}
         </button>
         <div class="dropdown-menu" :class="{ show: dropdowns.orderDropdown }" aria-labelledby="orderDropdown">
-          <a class="dropdown-item" @click="updateSortOrder('asc')">Aufsteigend</a>
-          <a class="dropdown-item" @click="updateSortOrder('desc')">Absteigend</a>
+          <a class="dropdown-item" @click="updateSortOrder('asc')">{{ $t('message.ascending') }}</a>
+          <a class="dropdown-item" @click="updateSortOrder('desc')">{{ $t('message.descending') }}</a>
         </div>
       </div>
     </div>
@@ -33,9 +33,8 @@
         {{ product.name }} - {{ product.beschreibung }} : {{ product.preis }} €
       </li>
     </ul>
-    <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
+    <p v-if="filteredProducts.length === 0">{{ $t('message.noProductsFound') }}</p>
   </div>
-
 </template>
 
 <script>
@@ -86,7 +85,7 @@ export default {
     },
     toggleDropdown(dropdown) {
       this.dropdowns[dropdown] = !this.dropdowns[dropdown];
-      // Schließe andere Dropdowns
+      // Close other dropdowns
       for (const key in this.dropdowns) {
         if (key !== dropdown) {
           this.dropdowns[key] = false;
@@ -110,12 +109,12 @@ export default {
       const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
       if (response.ok) {
         this.items = await response.json();
-        this.filterProducts(); // Filter und Sortierung nach dem Laden
+        this.filterProducts(); // Filter and sort after loading
       } else {
-        console.error('Fehler beim Laden der Produkte:', response.status);
+        console.error('Error loading products:', response.status);
       }
     } catch (error) {
-      console.error('Netzwerkfehler:', error);
+      console.error('Network error:', error);
     }
   }
 };

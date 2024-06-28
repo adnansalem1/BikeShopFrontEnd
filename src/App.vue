@@ -1,27 +1,32 @@
 <template>
-  <header class="header">
-    <div class="wrapper">
-      <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm">
-        <li class="nav-item">
-          <router-link to="/products-home" class="nav-link" aria-current="page">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/ProductList" class="nav-link">Produkte</router-link>
-        </li>
-      </ul>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="darkModeSwitch" v-model="darkMode" @change="toggleDarkMode">
-        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-      </div>
-    </div>
-  </header>
   <div id="app">
+    <header class="header">
+      <div class="wrapper">
+        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm">
+          <li class="nav-item">
+            <router-link to="/products-home" class="nav-link" aria-current="page">{{ $t('message.home') }}</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/ProductList" class="nav-link">{{ $t('message.products') }}</router-link>
+          </li>
+        </ul>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="darkModeSwitch" v-model="darkMode" @change="toggleDarkMode">
+          <label class="form-check-label" for="darkModeSwitch">{{ $t('message.darkMode') }}</label>
+        </div>
+        <div>
+          <button @click="changeLanguage('en')" :disabled="currentLocale === 'en'">EN</button>
+          <button @click="changeLanguage('de')" :disabled="currentLocale === 'de'">DE</button>
+        </div>
+      </div>
+    </header>
     <RouterView />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { RouterLink, RouterView } from 'vue-router';
 
 interface Anzeige {
@@ -59,6 +64,15 @@ const darkMode = ref(false), toggleDarkMode = () => {
   localStorage.setItem('darkMode', darkMode.value.toString());
 };
 
+const { locale } = useI18n();
+const currentLocale = ref(locale.value);
+
+const changeLanguage = (lang: string) => {
+  locale.value = lang;
+  currentLocale.value = lang;
+  localStorage.setItem('locale', lang);
+};
+
 onMounted(() => {
   loadThings();
 
@@ -67,6 +81,10 @@ onMounted(() => {
     toggleDarkMode();
   }
 
+  const savedLocale = localStorage.getItem('locale');
+  if (savedLocale) {
+    changeLanguage(savedLocale);
+  }
 });
 </script>
 
@@ -160,11 +178,22 @@ body {
 .form-check-input {
   cursor: pointer;
 }
+.language-switcher button {
+  background-color: var(--primary-color);
+  color: var(--dark-text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-.dark-mode {
-  --light-bg-color: var(--dark-bg-color);
-  --light-text-color: var(--dark-text-color);
-  --primary-color: var(--dark-bg-color);
-  --secondary-color: var(--primary-color);
+.language-switcher button.active {
+  background-color: var(--secondary-color);
+}
+
+.language-switcher button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 </style>

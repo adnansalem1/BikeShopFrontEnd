@@ -1,67 +1,67 @@
 <template>
   <div>
-    <h1 class="heading">Fahrräder Liste</h1>
+    <h1 class="heading">{{ $t('message.products') }}</h1>
     <ul>
       <li v-for="product in filteredProducts" :key="product.id" class="product-item">
         <div v-if="editingProduct && editingProduct.id === product.id">
           <input
               v-model="editingProduct.name"
-              placeholder="Name"
+              :placeholder="$t('message.name')"
               class="input-field"
           />
           <input
               v-model="editingProduct.beschreibung"
-              placeholder="Beschreibung"
+              :placeholder="$t('message.description')"
               class="input-field"
           />
           <input
               v-model="editingProduct.preis"
               type="number"
-              placeholder="Preis"
+              :placeholder="$t('message.price')"
               class="input-field"
           />
-          <button @click="saveProduct" class="shadow-sm btn btn-outline-success me-1">Speichern</button>
-          <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">Abbrechen</button>
+          <button @click="saveProduct" class="shadow-sm btn btn-outline-success me-1">{{ $t('message.save') }}</button>
+          <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">{{ $t('message.cancel') }}</button>
         </div>
         <div v-else>
           {{ product.name }} - {{ product.beschreibung }}: {{ product.preis }} €
-          <button @click="editProduct(product)" class="shadow-sm btn btn-outline-success me-1">Bearbeiten</button>
-          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-outline-danger">Löschen</button>
+          <button @click="editProduct(product)" class="shadow-sm btn btn-outline-success me-1">{{ $t('message.edit') }}</button>
+          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-outline-danger">{{ $t('message.delete') }}</button>
         </div>
       </li>
     </ul>
-    <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
+    <p v-if="filteredProducts.length === 0">{{ $t('message.noProductsFound') }}</p>
     <div class="form-container">
-      <h2>Neue Fahrräder hinzufügen</h2>
+      <h2>{{ $t('message.addNewProduct') }}</h2>
       <form @submit.prevent="addProduct">
         <input
             v-model="newProduct.name"
-            placeholder="Name"
+            :placeholder="$t('message.name')"
             class="input-field"
             required
         />
         <input
             v-model="newProduct.beschreibung"
-            placeholder="Beschreibung"
+            :placeholder="$t('message.description')"
             class="input-field"
             required
         />
         <input
             v-model="newProduct.preis"
             type="number"
-            placeholder="Preis"
+            :placeholder="$t('message.price')"
             class="input-field"
             required
             min="0"
         />
-        <button class="shadow-sm btn btn-outline-primary">Hinzufügen</button>
+        <button class="shadow-sm btn btn-outline-primary">{{ $t('message.addProduct') }}</button>
       </form>
     </div>
     <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
       <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
         <div v-if="message" class="toast show" role="alert" aria-live="assertive" aria-atomic="true" ref="toast">
           <div class="toast-header">
-            <strong class="me-auto">Nachricht</strong>
+            <strong class="me-auto">{{ $t('message.message') }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
@@ -74,11 +74,9 @@
 </template>
 
 <script>
-import { RouterLink } from "vue-router";
 import { Toast } from "bootstrap";  // Import Bootstrap's Toast
 
 export default {
-  components: { RouterLink },
   data() {
     return {
       searchQuery: "",
@@ -124,7 +122,7 @@ export default {
           this.newProduct.beschreibung = "";
           this.newProduct.preis = null;
           this.filterProducts();
-          this.setMessage('Produkt erfolgreich hinzugefügt! ');
+          this.setMessage(this.$t('message.productAdded'));
         } catch (error) {
           console.error("Error adding product:", error);
         }
@@ -147,14 +145,14 @@ export default {
         this.products.splice(index, 1, updatedProduct);
         this.editingProduct = null;
         this.filterProducts();
-        this.setMessage('Produkt erfolgreich aktualisiert!');
+        this.setMessage(this.$t('message.productUpdated'));
       } catch (error) {
         console.error("Error saving product:", error);
       }
     },
     cancelEdit() {
       this.editingProduct = null;
-      this.setMessage('Bearbeitung erfolgreich abgebrochen!');
+      this.setMessage(this.$t('message.editingCanceled'));
     },
     async deleteProduct(id) {
       try {
@@ -163,7 +161,7 @@ export default {
         });
         this.products = this.products.filter((product) => product.id !== id);
         this.filterProducts();
-        this.setMessage('Produkt erfolgreich gelöscht!');
+        this.setMessage(this.$t('message.productDeleted'));
       } catch (error) {
         console.error("Error deleting product:", error);
       }
@@ -172,7 +170,7 @@ export default {
       try {
         const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
         const products = await response.json();
-        console.log("Geladene Produkte:", products);
+        console.log("Loaded products:", products);
         this.products = products;
         this.filterProducts();
       } catch (error) {
@@ -210,6 +208,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 

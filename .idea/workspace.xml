@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="README.md Update">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="CSS Update">
+      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,60 +85,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Profiler#1&quot;,
-    &quot;Jest.HelloWorld.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.HelloWorld.renders properly.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.HelloWorld.spec.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.example.test.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.example.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Vitest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.HelloWorld.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.ProductComponent (1).executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.ProductComponent.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.ProductComponent.test.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.ProductHome.vue.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.Should have 5 odd numbers in [1, 10].executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/adnansalem/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.vue&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Profiler#1",
+    "Jest.HelloWorld.executor": "Run",
+    "Jest.HelloWorld.renders properly.executor": "Run",
+    "Jest.HelloWorld.spec.ts.executor": "Run",
+    "Jest.example.test.js.executor": "Run",
+    "Node.js.Unnamed.executor": "Run",
+    "Node.js.example.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Vitest.All Tests.executor": "Run",
+    "Vitest.HelloWorld.executor": "Run",
+    "Vitest.ProductComponent (1).executor": "Run",
+    "Vitest.ProductComponent.executor": "Run",
+    "Vitest.ProductComponent.test.ts.executor": "Run",
+    "Vitest.ProductHome.vue.executor": "Run",
+    "Vitest.Should have 5 odd numbers in [1, 10].executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/adnansalem/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.test.executor": "Run",
+    "prettier.import.notification.dismissed": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/adnansalem/Documents/GitHub/BikeShopFrontEnd/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/home" />
       <recent name="$PROJECT_DIR$/src/views" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -214,15 +218,7 @@
       <workItem from="1719572861421" duration="33000" />
       <workItem from="1719587739998" duration="8000" />
       <workItem from="1719590051500" duration="75000" />
-      <workItem from="1719590280296" duration="12732000" />
-    </task>
-    <task id="LOCAL-00003" summary="First Components v.1">
-      <option name="closed" value="true" />
-      <created>1716554497930</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1716554497930</updated>
+      <workItem from="1719590280296" duration="20100000" />
     </task>
     <task id="LOCAL-00004" summary="dependencies">
       <option name="closed" value="true" />
@@ -608,14 +604,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719572290702</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="CSS Update">
+      <option name="closed" value="true" />
+      <created>1719603742658</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1719603742659</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement axios for API calls and handle CORS issues" />
     <MESSAGE value="Delete Navbar.vue und V.heading.vue" />
     <MESSAGE value="POST-Anfragen" />
     <MESSAGE value="POST-Anfragen 2" />
@@ -640,7 +643,8 @@
     <MESSAGE value="Dark mode" />
     <MESSAGE value="Tests class" />
     <MESSAGE value="README.md Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Update" />
+    <MESSAGE value="CSS Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
