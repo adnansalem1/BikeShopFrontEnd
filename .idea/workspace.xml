@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="Tests class">
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="README.md Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="testVue" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -128,7 +137,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.ProductComponent.test.ts">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="ProductComponent.test.ts" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -201,15 +210,11 @@
       <workItem from="1719425511395" duration="239000" />
       <workItem from="1719425755749" duration="1289000" />
       <workItem from="1719427319872" duration="1712000" />
-      <workItem from="1719429043360" duration="6300000" />
-    </task>
-    <task id="LOCAL-00002" summary="First Components">
-      <option name="closed" value="true" />
-      <created>1715204696776</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715204696776</updated>
+      <workItem from="1719429043360" duration="7112000" />
+      <workItem from="1719572861421" duration="33000" />
+      <workItem from="1719587739998" duration="8000" />
+      <workItem from="1719590051500" duration="75000" />
+      <workItem from="1719590280296" duration="12732000" />
     </task>
     <task id="LOCAL-00003" summary="First Components v.1">
       <option name="closed" value="true" />
@@ -595,14 +600,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719429260515</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="README.md Update">
+      <option name="closed" value="true" />
+      <created>1719572290702</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1719572290702</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="View, Home, non using classes deleted" />
     <MESSAGE value="Implement axios for API calls and handle CORS issues" />
     <MESSAGE value="Delete Navbar.vue und V.heading.vue" />
     <MESSAGE value="POST-Anfragen" />
@@ -627,7 +639,8 @@
     <MESSAGE value="Price should be positive" />
     <MESSAGE value="Dark mode" />
     <MESSAGE value="Tests class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests class" />
+    <MESSAGE value="README.md Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

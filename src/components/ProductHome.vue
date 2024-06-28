@@ -30,7 +30,7 @@
     </div>
     <ul class="list-group">
       <li v-for="product in filteredProducts" :key="product.id" class="list-group-item">
-        {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
+        {{ product.name }} - {{ product.beschreibung }} : {{ product.preis }} €
       </li>
     </ul>
     <p v-if="filteredProducts.length === 0">Kein Produkt gefunden</p>
@@ -123,10 +123,14 @@ export default {
 
 <style scoped>
 .products-home {
-  max-width: 800px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 1rem;
-
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--main-text-color);
 }
 .search-container {
   margin-bottom: 1rem;
@@ -145,7 +149,6 @@ p {
 .dropdown {
   position: relative;
   display: inline-block;
-
 }
 .dropdown-menu {
   position: absolute;
@@ -191,4 +194,34 @@ p {
   text-decoration: none;
   background-color: #007bff;
 }
+.dropdown-toggle {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #007bff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+}
+.dropdown-toggle:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+}
+.dropdown-toggle:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+}
+.dropdown-toggle:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+}
+
 </style>

@@ -24,7 +24,7 @@
           <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">Abbrechen</button>
         </div>
         <div v-else>
-          {{ product.name }} - {{ product.beschreibung }} - {{ product.preis }} €
+          {{ product.name }} - {{ product.beschreibung }}: {{ product.preis }} €
           <button @click="editProduct(product)" class="shadow-sm btn btn-outline-success me-1">Bearbeiten</button>
           <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-outline-danger">Löschen</button>
         </div>
@@ -212,10 +212,11 @@ export default {
 </script>
 
 <style scoped>
+
 .heading {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #495057;
+  color: var(--main-text-color);
 }
 .form-container {
   margin-top: 2rem;
@@ -245,31 +246,8 @@ li {
 .input-field {
   margin-right: 1rem;
 }
-.button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-.save-button {
-  background-color: #28a745;
-  color: white;
-}
-.cancel-button {
-  background-color: #dc3545;
-  color: white;
-}
-.edit-button {
-  background-color: #007bff;
-  color: white;
-}
-.delete-button {
-  background-color: #dc3545;
-  color: white;
-}
-.add-button {
-  background-color: #007bff;
-  color: white;
+.form-container {
+  margin-top: 2rem;
 }
 
 .toast-container {
