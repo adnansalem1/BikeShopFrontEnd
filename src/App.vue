@@ -187,7 +187,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .language-switcher button.active {
   background-color: var(--secondary-color);
 }
