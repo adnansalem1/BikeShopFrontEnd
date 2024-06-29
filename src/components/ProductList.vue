@@ -1,226 +1,322 @@
 <template>
-  <div class="products-home">
-    <h1>{{ $t('message.products') }}</h1>
-    <div class="search-container">
-      <input
-          v-model="searchQuery"
-          :placeholder="$t('message.searchProduct')"
-          class="form-control"
-      />
-    </div>
-    <div class="filter-container">
-      <div class="dropdown" @click="toggleDropdown('sortDropdown')">
-        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="sortDropdown" aria-expanded="false">
-          {{ $t('message.sortBy') }}
-        </button>
-        <div class="dropdown-menu" :class="{ show: dropdowns.sortDropdown }" aria-labelledby="sortDropdown">
-          <a class="dropdown-item" @click="updateSortKey('name')">{{ $t('message.name') }}</a>
-          <a class="dropdown-item" @click="updateSortKey('preis')">{{ $t('message.price') }}</a>
+  <div>
+    <h1 class="heading">{{ $t('message.products') }}</h1>
+    <ul>
+      <li v-for="product in filteredProducts" :key="product.id" class="product-item">
+        <div v-if="editingProduct && editingProduct.id === product.id">
+          <input
+              v-model="editingProduct.name"
+              :placeholder="$t('message.name')"
+              class="input-field"
+          />
+          <input
+              v-model="editingProduct.beschreibung"
+              :placeholder="$t('message.description')"
+              class="input-field"
+          />
+          <input
+              v-model="editingProduct.preis"
+              type="number"
+              :placeholder="$t('message.price')"
+              class="input-field"
+          />
+          <button @click="saveProduct" class="shadow-sm btn btn-outline-success me-1">{{ $t('message.save') }}</button>
+          <button @click="cancelEdit" class="shadow-sm btn btn-outline-danger">{{ $t('message.cancel') }}</button>
         </div>
-      </div>
-      <div class="dropdown" @click="toggleDropdown('orderDropdown')">
-        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="orderDropdown" aria-expanded="false">
-          {{ $t('message.order') }}
-        </button>
-        <div class="dropdown-menu" :class="{ show: dropdowns.orderDropdown }" aria-labelledby="orderDropdown">
-          <a class="dropdown-item" @click="updateSortOrder('asc')">{{ $t('message.ascending') }}</a>
-          <a class="dropdown-item" @click="updateSortOrder('desc')">{{ $t('message.descending') }}</a>
+        <div v-else>
+          {{ product.name }} - {{ product.beschreibung }}: {{ product.preis }} €
+          <button @click="editProduct(product)" class="shadow-sm btn btn-outline-success me-1">{{ $t('message.edit') }}</button>
+          <button @click="deleteProduct(product.id)" class="shadow-sm btn btn-outline-danger">{{ $t('message.delete') }}</button>
         </div>
-      </div>
-    </div>
-    <ul class="list-group">
-      <li v-for="product in filteredProducts" :key="product.id" class="list-group-item">
-        {{ product.name }} - {{ product.beschreibung }} : {{ product.preis }} €
       </li>
     </ul>
     <p v-if="filteredProducts.length === 0">{{ $t('message.noProductsFound') }}</p>
+    <div class="form-container">
+      <h2>{{ $t('message.addNewProduct') }}</h2>
+      <form @submit.prevent="addProduct">
+        <input
+            v-model="newProduct.name"
+            :placeholder="$t('message.name')"
+            class="input-field"
+            required
+        />
+        <input
+            v-model="newProduct.beschreibung"
+            :placeholder="$t('message.description')"
+            class="input-field"
+            required
+        />
+        <input
+            v-model="newProduct.preis"
+            type="number"
+            :placeholder="$t('message.price')"
+            class="input-field"
+            required
+            min="0"
+        />
+        <button class="shadow-sm btn btn-outline-primary">{{ $t('message.addProduct') }}</button>
+      </form>
+    </div>
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+      <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+        <div v-if="message" class="toast show" role="alert" aria-live="assertive" aria-atomic="true" ref="toast">
+          <div class="toast-header">
+            <strong class="me-auto">{{ $t('message.message') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            {{ message }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { Toast } from "bootstrap";  // Import Bootstrap's Toast
+
 export default {
   data() {
     return {
       searchQuery: "",
-      sortKey: 'name',
-      sortOrder: 'asc',
-      items: [],
+      newProduct: {
+        name: "",
+        beschreibung: "",
+        preis: null,
+      },
+      editingProduct: null,
+      products: [],
       filteredProducts: [],
-      dropdowns: {
-        sortDropdown: false,
-        orderDropdown: false
-      }
+      message: null,
     };
   },
   methods: {
     filterProducts() {
-      let result = this.items;
-      if (this.searchQuery) {
-        const lowerCaseQuery = this.searchQuery.toLowerCase();
-        result = result.filter(product => {
-          return (
-              product.name.toLowerCase().includes(lowerCaseQuery) ||
-              product.beschreibung.toLowerCase().includes(lowerCaseQuery) ||
-              product.preis.toString().includes(lowerCaseQuery)
-          );
-        });
-      }
-      this.sortProducts(result);
-    },
-    sortProducts(result = this.filteredProducts) {
-      result.sort((a, b) => {
-        let modifier = 1;
-        if (this.sortOrder === 'desc') modifier = -1;
-        if (a[this.sortKey] < b[this.sortKey]) return -1 * modifier;
-        if (a[this.sortKey] > b[this.sortKey]) return 1 * modifier;
-        return 0;
+      const lowerCaseQuery = this.searchQuery.toLowerCase();
+      this.filteredProducts = this.products.filter(product => {
+        return (
+            product.name.toLowerCase().includes(lowerCaseQuery) ||
+            product.beschreibung.toLowerCase().includes(lowerCaseQuery) ||
+            product.preis.toString().includes(lowerCaseQuery)
+        );
       });
-      this.filteredProducts = result;
     },
-    updateSortKey(key) {
-      this.sortKey = key;
-    },
-    updateSortOrder(order) {
-      this.sortOrder = order;
-    },
-    toggleDropdown(dropdown) {
-      this.dropdowns[dropdown] = !this.dropdowns[dropdown];
-      // Close other dropdowns
-      for (const key in this.dropdowns) {
-        if (key !== dropdown) {
-          this.dropdowns[key] = false;
+    async addProduct() {
+      if (
+          this.newProduct.name &&
+          this.newProduct.beschreibung &&
+          this.newProduct.preis !== null
+      ) {
+        try {
+          const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(this.newProduct),
+          });
+          const addedProduct = await response.json();
+          this.products.push(addedProduct);
+          this.newProduct.name = "";
+          this.newProduct.beschreibung = "";
+          this.newProduct.preis = null;
+          this.filterProducts();
+          this.setMessage(this.$t('message.productAdded'));
+        } catch (error) {
+          console.error("Error adding product:", error);
         }
       }
+    },
+    editProduct(product) {
+      this.editingProduct = { ...product };
+    },
+    async saveProduct() {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${this.editingProduct.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(this.editingProduct),
+        });
+        const updatedProduct = await response.json();
+        const index = this.products.findIndex(p => p.id === updatedProduct.id);
+        this.products.splice(index, 1, updatedProduct);
+        this.editingProduct = null;
+        this.filterProducts();
+        this.setMessage(this.$t('message.productUpdated'));
+      } catch (error) {
+        console.error("Error saving product:", error);
+      }
+    },
+    cancelEdit() {
+      this.editingProduct = null;
+      this.setMessage(this.$t('message.editingCanceled'));
+    },
+    async deleteProduct(id) {
+      try {
+        await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen/${id}`, {
+          method: "DELETE",
+        });
+        this.products = this.products.filter((product) => product.id !== id);
+        this.filterProducts();
+        this.setMessage(this.$t('message.productDeleted'));
+      } catch (error) {
+        console.error("Error deleting product:", error);
+      }
+    },
+    async loadProducts() {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
+        const products = await response.json();
+        console.log("Loaded products:", products);
+        this.products = products;
+        this.filterProducts();
+      } catch (error) {
+        console.error("Error loading products:", error);
+      }
+    },
+    setMessage(message) {
+      this.message = message;
+
+      // Ensure the toast element is available
+      this.$nextTick(() => {
+        const toastEl = this.$refs.toast;
+        if (toastEl) {
+          const toast = new Toast(toastEl);
+          toast.show();
+
+          // Hide the toast after 3 seconds
+          setTimeout(() => {
+            toast.hide();
+            this.message = null;
+          }, 3000);
+        } else {
+          console.error("Toast element is not found");
+        }
+      });
     }
   },
   watch: {
     searchQuery() {
       this.filterProducts();
     },
-    sortKey() {
-      this.sortProducts();
-    },
-    sortOrder() {
-      this.sortProducts();
-    }
   },
   async mounted() {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_APP_BACKEND_BASE_URL}/anzeigen`);
-      if (response.ok) {
-        this.items = await response.json();
-        this.filterProducts(); // Filter and sort after loading
-      } else {
-        console.error('Error loading products:', response.status);
-      }
-    } catch (error) {
-      console.error('Network error:', error);
-    }
-  }
+    await this.loadProducts();
+  },
 };
 </script>
 
+
 <style scoped>
-.products-home {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-h1 {
+
+.heading {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--main-text-color);
 }
-.search-container {
+.form-container {
+  margin-top: 2rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
   margin-bottom: 1rem;
 }
-.filter-container {
-  margin-bottom: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-.list-group-item {
-  margin-bottom: 0.5rem;
-}
-p {
-  color: red;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}
-.dropdown-menu.show {
-  display: block;
-}
-.dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
-  font-weight: 400;
-  color: #212529;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-}
-.dropdown-item:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #007bff;
-}
-.dropdown-item:focus, .dropdown-item:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #007bff;
-}
-.dropdown-toggle {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #007bff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #007bff;
-  border-radius: 0.25rem;
-}
-.dropdown-toggle:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #007bff;
-}
-.dropdown-toggle:focus {
-  color: #fff;
-  text-decoration: none;
-  background-color: #007bff;
-}
-.dropdown-toggle:active {
-  color: #fff;
-  text-decoration: none;
-  background-color: #007bff;
+.input-field {
+  margin-right: 1rem;
+  color: #495057;
 }
 
+.product-item {
+  margin-bottom: 1rem;
+  color: #495057;
+  background-color: #f8f9fb;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border-bottom: 1px solid #ccc;
+}
+.input-field {
+  margin-right: 1rem;
+}
+.form-container {
+  margin-top: 2rem;
+}
+
+.toast-container {
+  position: fixed;
+  border-color: #28a745;
+  color: #0c77e3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toast {
+  background-color: #28a745;
+  color: white;
+}
+
+.toast-header {
+  background-color: #28a745;
+  color: white;
+}
+
+.toast-body {
+  background-color: #28a745;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .input-field {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .input-field {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .input-field {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 992px) {
+  .input-field {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .input-field {
+    width: 20%;
+  }
+}
+@media (min-width: 1400px) {
+  .input-field {
+    width: 16.67%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .input-field {
+    width: 14.28%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .input-field {
+    width: 12.5%;
+  }
+}
 </style>

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="CSS Update">
-      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductHome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-    </list>
+    <list default="true" id="7a4823e2-96cb-4bac-8d3b-db4abc652bfe" name="Changes" comment="CSS Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,18 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;adnansalem1&quot;
-    }
-    }</component>
-  <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/adnansalem1/BikeShopFrontEnd.git&quot;,
-    &quot;accountId&quot;: &quot;a3aab4db-f110-4559-99ad-d7180bd498dc&quot;
-    }
-    }</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "adnansalem1"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/adnansalem1/BikeShopFrontEnd.git",
+    "accountId": "a3aab4db-f110-4559-99ad-d7180bd498dc"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/components/home/ProductList.vue" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -219,6 +209,7 @@
       <workItem from="1719587739998" duration="8000" />
       <workItem from="1719590051500" duration="75000" />
       <workItem from="1719590280296" duration="20100000" />
+      <workItem from="1719617768776" duration="392000" />
     </task>
     <task id="LOCAL-00004" summary="dependencies">
       <option name="closed" value="true" />
